@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Sunbleach, a Scottsdale skincare brand made for dry desert climates. Shop desert-inspired skincare and learn how to care for your skin.">
+  <title>Sunbleach Skincare | Desert Skin, Simplified</title>
+  <style>
+    :root {
+      --cream: #faf6ee;
+      --sand: #e9d8bf;
+      --terracotta: #b85e43;
+      --dark: #302d27;
+      --sage: #68765c;
+      --white: #fffdf9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--dark); font-family: Arial, Helvetica, sans-serif; line-height: 1.7; }
+    a { color: inherit; }
+    .notice { background: #302d27; color: white; text-align: center; padding: 10px 16px; font-size: .78rem; line-height: 1.5; }
+    header { padding: 20px 6%; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .logo { font-family: Georgia, serif; font-size: 2rem; font-weight: bold; letter-spacing: 3px; text-decoration: none; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: .9rem; }
+    nav a:hover, .text-link:hover { color: var(--terracotta); }
+    .hero { padding: 75px 8%; min-height: 470px; display: flex; align-items: center; background: linear-gradient(110deg, #ead8be, #f8eee0 60%, #d8d9c3); }
+    .hero-content { max-width: 660px; }
+    .eyebrow { color: var(--terracotta); text-transform: uppercase; font-weight: bold; letter-spacing: 2px; font-size: .78rem; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; font-weight: normal; }
+    h1 { font-size: clamp(2.7rem, 7vw, 5rem); margin: 12px 0 20px; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 18px; }
+    h3 { font-size: 1.55rem; margin: 12px 0; }
+    p { margin-top: 0; }
+    .button { display: inline-block; background: var(--terracotta); color: white; text-decoration: none; padding: 13px 22px; border-radius: 3px; margin: 10px 8px 0 0; font-weight: bold; }
+    .button.secondary { background: transparent; color: var(--dark); border: 1px solid var(--dark); }
+    section { padding: 65px 8%; }
+    .section-heading { max-width: 700px; margin-bottom: 30px; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .card { background: var(--white); padding: 24px; border: 1px solid #e6ddcf; border-radius: 5px; }
+    .product-art { min-height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 4px; margin-bottom: 18px; }
+    .art-one { background: #e6d5bc; }
+    .art-two { background: #d5d9c5; }
+    .art-three { background: #e9c6ae; }
+    .bottle { width: 72px; height: 115px; border-radius: 12px 12px 8px 8px; background: #f9f0dc; border: 2px solid #c2ab8e; display: flex; align-items: center; justify-content: center; text-align: center; font: 11px Georgia, serif; letter-spacing: 1px; padding: 8px; box-shadow: 5px 8px 14px #302d2720; }
+    .bottle.jar { width: 100px; height: 75px; border-radius: 12px 12px 20px 20px; }
+    .text-link { color: var(--terracotta); font-weight: bold; text-decoration: none; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center; }
+    .feature-panel { background: #e2e4d5; padding: 35px; border-radius: 5px; }
+    .ingredient-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .ingredient-list span { background: var(--white); border: 1px solid #d7d8c9; border-radius: 30px; padding: 7px 13px; font-size: .88rem; }
+    .quiz { background: #eee1d0; }
+    .quiz form { max-width: 720px; background: var(--white); padding: 25px; border-radius: 5px; }
+    fieldset { border: 1px solid #ded2c1; margin: 0 0 20px; padding: 15px; }
+    legend { font-weight: bold; padding: 0 5px; }
+    label { display: block; margin: 8px 0; }
+    select { width: 100%; padding: 12px; border: 1px solid #c9bba9; background: white; font: inherit; }
+    .guide-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .guide { border-top: 3px solid var(--sage); padding: 20px 0; }
+    .stores { background: #dfe2d4; }
+    .store-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    footer { background: var(--dark); color: white; padding: 35px 8%; }
+    footer nav { margin: 18px 0; }
+    footer nav a { color: white; }
+    .footer-note { font-size: .8rem; color: #e5ded3; }
+    @media (max-width: 760px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { padding: 55px 7%; }
+      section { padding: 45px 7%; }
+      .cards, .guide-list, .store-list, .split { grid-template-columns: 1fr; }
+      .split { gap: 25px; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+
+  <header>
+    <a class="logo" href="index.html">SUNBLEACH</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html">Sunscreen</a>
+      <a href="barrier-repair.html">Skin Barrier Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Born in Scottsdale, Arizona</p>
+        <h1>Desert skin.<br>Less complicated.</h1>
+        <p>Sun, dry heat, and indoor air conditioning can leave skin feeling tight, dull, and thirsty. Sunbleach is a fictional small-batch skincare line inspired by desert living, with thoughtful ingredients and a simple routine designed for everyday life in the Southwest.</p>
+        <a class="button" href="#products">Explore the collection</a>
+        <a class="button secondary" href="#routine">Find your routine</a>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="section-heading">
+        <p class="eyebrow">The essentials</p>
+        <h2>Three steps. A little more balance.</h2>
+        <p>Keep your routine simple with a gentle cleanse, moisture that supports your skin barrier, and daily mineral sun protection.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="product-art art-one"><div class="bottle">SUNBLEACH<br>DAILY WASH</div></div>
+          <p class="eyebrow">01 / Cleanse</p>
+          <h3>Soft Start Cleanser</h3>
+          <p>A low-fuss daily cleanser designed to lift away sunscreen, sweat, and everyday buildup without leaving skin feeling stripped.</p>
+          <p><strong>Key ingredients:</strong> aloe vera, glycerin, and jojoba oil.</p>
+          <a class="text-link" href="#ingredients">Explore our ingredients →</a>
+        </article>
+        <article class="card">
+          <div class="product-art art-two"><div class="bottle jar">SUNBLEACH<br>DAILY CREAM</div></div>
+          <p class="eyebrow">02 / Moisturize</p>
+          <h3>Desert Dew Barrier Cream</h3>
+          <p>A comforting moisturizer that helps skin hold onto hydration through hot afternoons and chilly air-conditioned rooms.</p>
+          <p><strong>Key ingredients:</strong> prickly pear, jojoba oil, and ceramides.</p>
+          <a class="text-link" href="moisturizer.html">Read the moisturizer guide →</a>
+        </article>
+        <article class="card">
+          <div class="product-art art-three"><div class="bottle">SUNBLEACH<br>MINERAL SPF</div></div>
+          <p class="eyebrow">03 / Protect</p>
+          <h3>Daybreak Mineral SPF 30</h3>
+          <p>A daily mineral sunscreen concept with zinc oxide, a comfortable finish, and guidance for applying enough product.</p>
+          <p><strong>Key ingredients:</strong> zinc oxide, blue agave extract, and squalane.</p>
+          <a class="text-link" href="sunscreen.html">Read the sunscreen guide →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="ingredients">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Desert-inspired ingredients</p>
+          <h2>Thoughtful formulas, rooted in the Southwest.</h2>
+          <p>Sunbleach draws inspiration from ingredients associated with the region and pairs them with familiar skincare staples. The fictional formulas are imagined as vegan and cruelty-free, with a focus on hydration, comfort, and daily sun protection.</p>
+          <div class="ingredient-list">
+            <span>Prickly pear</span><span>Jojoba oil</span><span>Blue agave</span><span>Glycerin</span><span>Ceramides</span><span>Zinc oxide</span>
+          </div>
+        </div>
+        <div class="feature-panel">
+          <h3>Made for a dry-climate routine</h3>
+          <p><strong>Hydrate:</strong> humectants such as glycerin help attract water to the skin.</p>
+          <p><strong>Support:</strong> emollients and barrier-supporting ingredients help soften skin and reduce moisture loss.</p>
+          <p><strong>Protect:</strong> broad-spectrum sunscreen helps protect skin from UVA and UVB exposure when used as directed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz" id="routine">
+      <div class="section-heading">
+        <p class="eyebrow">The two-minute routine finder</p>
+        <h2>What does your skin need today?</h2>
+        <p>Choose the options that sound most like you. This educational guide offers a simple starting point, not a medical diagnosis.</p>
+      </div>
+      <form action="#recommendations" method="get">
+        <fieldset>
+          <legend>1. How does your skin usually feel after cleansing?</legend>
+          <label><input type="radio" name="skin" value="dry" required> Tight, flaky, or dry</label>
+          <label><input type="radio" name="skin" value="oily"> Shiny or oily</label>
+          <label><input type="radio" name="skin" value="combination"> Oily in some areas and dry in others</label>
+          <label><input type="radio" name="skin" value="sensitive"> Easily irritated or uncomfortable</label>
+        </fieldset>
+        <fieldset>
+          <legend>2. How much time do you spend outside?</legend>
+          <label><input type="radio" name="sun" value="low" required> Mostly indoors with short trips outside</label>
+          <label><input type="radio" name="sun" value="medium"> A few hours outdoors most days</label>
+          <label><input type="radio" name="sun" value="high"> Long periods outdoors or exercising in the sun</label>
+        </fieldset>
+        <button class="button" type="submit">View my routine</button>
+      </form>
+      <div id="recommendations" class="feature-panel" style="margin-top:25px">
+        <h3>Your routine starting point</h3>
+        <p>For dry or sensitive skin, start with a gentle cleanser, apply a moisturizer while skin is slightly damp, and finish with broad-spectrum SPF 30 or higher. For oily or combination skin, use a lighter layer of moisturizer rather than skipping it. If you spend time outside, reapply sunscreen at least every two hours and after swimming or sweating, following the label directions.</p>
+        <p>Your answers are not processed by a recommendation engine; use the guidance above to choose the steps that fit your needs.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <p class="eyebrow">The Sunbleach journal</p>
+        <h2>Good skin days start with good information.</h2>
+      </div>
+      <div class="guide-list">
+        <article class="guide">
+          <h3>Moisturizer for Dry Skin in Summer</h3>
+          <p>Learn how to moisturize without a heavy feeling when the temperatures rise.</p>
+          <a class="text-link" href="moisturizer.html">Read the guide →</a>
+        </article>
+        <article class="guide">
+          <h3>Mineral Sunscreen Without a White Cast</h3>
+          <p>Understand why mineral sunscreens can look chalky and how to find a finish you like.</p>
+          <a class="text-link" href="sunscreen.html">Read the guide →</a>
+        </article>
+        <article class="guide">
+          <h3>How to Repair Your Skin Barrier</h3>
+          <p>Build a calmer routine with gentle cleansing, moisturizer, and fewer irritating extras.</p>
+          <a class="text-link" href="barrier-repair.html">Read the guide →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="stores">
+      <div class="section-heading">
+        <p class="eyebrow">Our fictional local stockists</p>
+        <h2>Inspired by the Valley.</h2>
+        <p>Sunbleach is a classroom concept, so these sample retailers and addresses are invented. They are included to demonstrate how a local stockist directory could appear on the website.</p>
+      </div>
+      <div class="store-list">
+        <article class="card">
+          <h3>Cactus & Clay Market</h3>
+          <p>Scottsdale, Arizona</p>
+          <p>A neighborhood concept shop for desert-made goods, skincare, and everyday essentials.</p>
+        </article>
+        <article class="card">
+          <h3>Sol House Collective</h3>
+          <p>Phoenix, Arizona</p>
+          <p>A fictional boutique concept focused on mindful beauty and Southwest design.</p>
+        </article>
+        <article class="card">
+          <h3>Desert Bloom Apothecary</h3>
+          <p>Old Town Scottsdale, Arizona</p>
+          <p>A fictional skincare destination imagined for ingredient-conscious shoppers.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html" style="color:white">SUNBLEACH</a>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html">Sunscreen</a>
+      <a href="barrier-repair.html">Skin Barrier Guide</a>
+    </nav>
+    <p class="footer-note">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    <p class="footer-note">Sunbleach is a fictional skincare concept. Product descriptions are educational and do not represent tested or commercially available formulas.</p>
+  </footer>
+</body>
+</html>
