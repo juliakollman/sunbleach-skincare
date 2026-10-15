@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to repair your skin barrier with gentle cleansing, moisturizer, ceramides, and daily sun protection. Build a simple routine for dry desert climates.">
+  <title>How to Repair Your Skin Barrier | Sunbleach</title>
+  <style>
+    :root { --cream:#faf6ee; --sand:#e9d8bf; --terra:#b85e43; --dark:#302d27; --sage:#68765c; --white:#fffdf9; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--cream); color:var(--dark); font:16px/1.75 Arial,Helvetica,sans-serif; }
+    a { color:inherit; }
+    .notice { background:var(--dark); color:white; text-align:center; padding:10px 16px; font-size:.78rem; line-height:1.5; }
+    header { padding:20px 6%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px; }
+    .logo { font:bold 2rem Georgia,serif; letter-spacing:3px; text-decoration:none; }
+    nav { display:flex; flex-wrap:wrap; gap:16px; }
+    nav a { text-decoration:none; font-size:.9rem; }
+    nav a:hover,.text-link:hover { color:var(--terra); }
+    .hero { background:linear-gradient(110deg,#ead8be,#f8eee0 60%,#d8d9c3); padding:75px 8%; }
+    .hero-content { max-width:800px; }
+    .eyebrow { color:var(--terra); text-transform:uppercase; font-size:.78rem; letter-spacing:2px; font-weight:bold; }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; line-height:1.2; font-weight:normal; }
+    h1 { font-size:clamp(2.5rem,7vw,4.6rem); margin:12px 0 20px; }
+    h2 { font-size:clamp(2rem,4vw,2.8rem); }
+    h3 { font-size:1.5rem; margin-bottom:10px; }
+    section { padding:55px 8%; }
+    .button { display:inline-block; background:var(--terra); color:white; text-decoration:none; padding:12px 20px; margin-top:8px; border-radius:3px; font-weight:bold; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:35px; align-items:center; }
+    .panel { background:#e2e4d5; border-radius:5px; padding:28px; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .card { background:var(--white); padding:22px; border:1px solid #e6ddcf; border-radius:5px; }
+    .swatch { min-height:105px; border-radius:4px; margin-bottom:18px; display:flex; align-items:center; justify-content:center; background:#e9d8bf; font:1.1rem Georgia,serif; letter-spacing:2px; text-align:center; padding:10px; }
+    .text-link { color:var(--terra); font-weight:bold; text-decoration:none; }
+    .callout { border-left:4px solid var(--sage); padding:5px 0 5px 20px; margin-bottom:25px; }
+    footer { background:var(--dark); color:white; padding:35px 8%; }
+    footer nav { margin:18px 0; }
+    footer nav a { color:white; }
+    .footer-note { color:#e5ded3; font-size:.8rem; }
+    @media(max-width:760px) {
+      header { justify-content:center; text-align:center; }
+      nav { justify-content:center; gap:12px; }
+      .hero { padding:50px 7%; }
+      section { padding:40px 7%; }
+      .split,.cards { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+  <header>
+    <a class="logo" href="index.html">SUNBLEACH</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html">Sunscreen</a>
+      <a href="barrier-repair.html">Skin Barrier Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">The skin barrier guide</p>
+        <h1>How to Repair Your Skin Barrier</h1>
+        <p>If your skin suddenly feels tight, flaky, red, or uncomfortable, your routine may be doing too much. Your skin barrier helps retain moisture and protect against external irritants. Supporting it often starts with fewer products, gentle cleansing, and consistent hydration.</p>
+        <a class="button" href="#routine">Build a simpler routine</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="split">
+        <div>
+          <p class="eyebrow">Understand your skin</p>
+          <h2>What is the skin barrier?</h2>
+          <p>The outermost layer of your skin helps keep water in while providing a protective barrier against the outside environment. Its structure includes skin cells and lipids, including ceramides, that help maintain its protective function.</p>
+          <p>When this layer is irritated or disrupted, skin may lose moisture more easily and become more sensitive to products that once felt comfortable.</p>
+          <p>Dry desert air and frequent indoor air conditioning can add to the feeling of dryness, but irritation can have many causes.</p>
+        </div>
+        <div class="panel">
+          <h3>Common signs of an irritated barrier</h3>
+          <ul>
+            <li>Persistent tightness or rough, flaky patches.</li>
+            <li>Stinging when applying familiar skincare products.</li>
+            <li>Redness or increased sensitivity.</li>
+            <li>A dry, uncomfortable feeling after washing.</li>
+          </ul>
+          <p>These symptoms can have other causes, too. They do not confirm a damaged skin barrier on their own.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#eee1d0">
+      <p class="eyebrow">Start with the basics</p>
+      <h2>Three steps to support your skin barrier</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="swatch">01 / CLEANSE</div>
+          <h3>Use a gentle cleanser</h3>
+          <p>Choose a mild cleanser that removes sweat, dirt, and sunscreen without leaving your skin feeling stripped. Use lukewarm water and avoid harsh scrubbing.</p>
+        </article>
+        <article class="card">
+          <div class="swatch" style="background:#d5d9c5">02 / MOISTURIZE</div>
+          <h3>Replenish moisture</h3>
+          <p>Apply a fragrance-free moisturizer while your skin is slightly damp. Ingredients such as glycerin, ceramides, and emollients can help support hydration and skin comfort.</p>
+        </article>
+        <article class="card">
+          <div class="swatch" style="background:#e9c6ae">03 / PROTECT</div>
+          <h3>Wear daily sunscreen</h3>
+          <p>Choose broad-spectrum SPF 30 or higher. Sun protection helps reduce UV-related skin damage while your skin is recovering from irritation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="routine">
+      <p class="eyebrow">Your simple routine</p>
+      <h2>What to do in the morning and at night</h2>
+      <div class="split">
+        <div class="panel">
+          <h3>Morning</h3>
+          <ol>
+            <li>Rinse with lukewarm water or use a gentle cleanser if needed.</li>
+            <li>Apply a fragrance-free moisturizer.</li>
+            <li>Finish with broad-spectrum SPF 30 or higher.</li>
+          </ol>
+          <p>Keep the routine comfortable. If a product stings or causes irritation, stop using it and reassess the formula.</p>
+        </div>
+        <div class="panel">
+          <h3>Evening</h3>
+          <ol>
+            <li>Gently remove sunscreen, makeup, and daily buildup.</li>
+            <li>Apply moisturizer to slightly damp skin.</li>
+            <li>Skip unnecessary active ingredients while your skin is irritated.</li>
+          </ol>
+          <p>Consistency is more useful than layering several new products at once.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="split">
+        <div>
+          <p class="eyebrow">Ingredients worth knowing</p>
+          <h2>Give your skin the support it needs</h2>
+          <p>You do not need a long ingredient list to build a useful routine. A few well-chosen ingredients can help maintain hydration and improve the feel of dry skin.</p>
+          <h3>Ceramides</h3>
+          <p>These lipids are naturally present in the skin barrier. Skincare products containing ceramides can help support the barrier's moisture-retaining function.</p>
+          <h3>Glycerin</h3>
+          <p>This humectant attracts water to the outer layers of the skin and helps improve hydration.</p>
+          <h3>Jojoba oil and squalane</h3>
+          <p>These emollients help soften skin and improve its surface feel, making them useful ingredients to consider in a moisturizer.</p>
+        </div>
+        <div class="panel">
+          <p class="eyebrow">The Sunbleach approach</p>
+          <h3>Desert Dew Barrier Cream</h3>
+          <p>Sunbleach's fictional moisturizer concept combines prickly pear extract, jojoba oil, glycerin, and ceramides. It is imagined for people who want a straightforward moisturizer for dry-climate living.</p>
+          <p>Pairing a moisturizer with gentle cleansing and daily sun protection creates a simple foundation for a skincare routine.</p>
+          <a class="text-link" href="moisturizer.html">Explore summer moisturizing tips →</a>
+          <p><em>This product concept is fictional and has not been formulated or tested.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#dfe2d4">
+      <p class="eyebrow">Things to pause</p>
+      <h2>Common habits that can worsen irritation</h2>
+      <div class="callout">
+        <h3>Over-exfoliating</h3>
+        <p>Frequent exfoliation with acids or scrubs can irritate skin, especially when it is already dry or sensitive. Pause exfoliating products while irritation settles.</p>
+      </div>
+      <div class="callout">
+        <h3>Using too many active ingredients</h3>
+        <p>Combining retinoids, exfoliating acids, and other strong products can increase irritation for some people. Simplify your routine and reintroduce products cautiously when your skin is comfortable.</p>
+      </div>
+      <div class="callout">
+        <h3>Washing with very hot water</h3>
+        <p>Hot water and harsh cleansers can contribute to dryness. Try lukewarm water and a gentle cleansing approach instead.</p>
+      </div>
+      <div class="callout">
+        <h3>Changing everything at once</h3>
+        <p>Introducing several new products makes it difficult to identify what is causing a reaction. Keep your routine simple and introduce new products one at a time.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Frequently asked questions</p>
+      <h2>Skin barrier repair, explained</h2>
+      <h3>How long does it take to repair a skin barrier?</h3>
+      <p>It depends on the cause and severity of the irritation. Mild dryness may improve with gentle care, while persistent inflammation or an underlying skin condition may need professional treatment. There is no single recovery timeline for everyone.</p>
+      <h3>Should I stop using retinol?</h3>
+      <p>If your skin is irritated, consider pausing retinol and other potentially irritating active ingredients until your skin feels comfortable. Follow product directions and seek professional guidance if you are unsure when to restart.</p>
+      <h3>Can oily skin have a damaged barrier?</h3>
+      <p>Yes. Oil production and the skin barrier are different things. Oily skin can still experience dehydration, irritation, and moisture loss.</p>
+      <h3>When should I see a dermatologist?</h3>
+      <p>Seek medical advice if irritation is severe, painful, persistent, worsening, or accompanied by swelling, cracking, or signs of infection. A dermatologist can help identify the cause and recommend appropriate treatment.</p>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="panel">
+        <p class="eyebrow">Keep exploring</p>
+        <h2>Your desert skincare routine starts here.</h2>
+        <p>Learn how to choose a summer moisturizer and find practical tips for wearing mineral sunscreen comfortably in sunny weather.</p>
+        <a class="button" href="moisturizer.html">Summer moisturizer guide</a>
+        <a class="button" href="sunscreen.html">Mineral sunscreen guide</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html" style="color:white">SUNBLEACH</a>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html">Sunscreen</a>
+      <a href="barrier-repair.html">Skin Barrier Guide</a>
+    </nav>
+    <p class="footer-note">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    <p class="footer-note">This guide is for general educational purposes and does not replace advice from a qualified healthcare professional.</p>
+  </footer>
+</body>
+</html>
