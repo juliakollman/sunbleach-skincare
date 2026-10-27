@@ -1,216 +1,630 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn the basics of your skin barrier, common signs of irritation, and a gentle routine inspired by Sunbleach desert skincare.">
-  <title>How to Repair Your Skin Barrier | Sunbleach</title>
+  <title>The Skin Barrier Guide | Sunbleach Skincare</title>
+  <meta name="description" content="Learn what your skin barrier does and how to build a simple routine for dry or irritated skin.">
   <style>
     :root {
-      --cream: #fff8ed;
-      --sand: #f2dfc4;
-      --orange: #f47745;
-      --pink: #efaaa1;
-      --red: #a94332;
-      --green: #526b4d;
-      --dark: #302b25;
-      --white: #ffffff;
+      --coral: #FF684A;
+      --pink: #FFB7C5;
+      --yellow: #FFD85A;
+      --turquoise: #76D9C3;
+      --vanilla: #FFF8EF;
+      --ink: #252321;
+      --white: #FFFFFF;
+      --radius: 24px;
+      --shadow: 5px 5px 0 var(--ink);
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.7; }
+
+    body {
+      margin: 0;
+      background: var(--vanilla);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
     a { color: inherit; }
-    .notice { padding: 12px 20px; background: var(--dark); color: var(--white); text-align: center; font-size: 12px; line-height: 1.5; }
-    header { padding: 20px 7%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid var(--sand); }
-    .logo { color: var(--red); font-size: 30px; font-weight: 900; letter-spacing: 5px; text-decoration: none; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { font-size: 13px; font-weight: bold; text-decoration: none; }
-    nav a:hover { color: var(--red); }
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.15; }
-    h1 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -2px; margin: 15px 0 20px; }
-    h2 { font-size: clamp(30px, 4vw, 45px); margin-top: 0; }
-    h3 { font-size: 25px; margin-top: 0; }
-    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 800; }
-    .hero { padding: 70px 7%; background: var(--sand); display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 45px; }
-    .hero p { max-width: 570px; }
-    .hero-art { min-height: 330px; background: var(--pink); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .sun { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: #ffdc7b; top: 25px; left: calc(50% - 95px); }
-    .hill { position: absolute; width: 140%; height: 150px; bottom: -75px; background: var(--red); border-radius: 50% 50% 0 0; transform: rotate(-9deg); }
-    .hill.two { bottom: -110px; background: var(--green); transform: rotate(9deg); }
-    .art-label { position: absolute; z-index: 3; bottom: 30px; color: var(--white); font-family: Georgia, serif; font-size: 24px; letter-spacing: 2px; text-align: center; }
-    section { padding: 65px 7%; }
-    .intro { max-width: 750px; margin-bottom: 30px; }
-    .intro p { color: #665d52; }
-    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    .card { background: var(--white); border: 1px solid var(--sand); padding: 28px; }
-    .card ul { padding-left: 20px; }
-    .card p:last-child { margin-bottom: 0; }
-    .dark-section { background: var(--green); color: var(--white); }
-    .dark-section .intro p { color: #f2eadc; }
-    .dark-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .dark-card { background: rgba(255,255,255,.1); padding: 23px; border-top: 3px solid var(--pink); }
-    .dark-card h3 { margin-bottom: 10px; }
-    .dark-card p { font-size: 14px; }
-    .routine { background: #f9e5d9; }
-    .steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
-    .step { padding: 23px; background: var(--cream); }
-    .step-number { color: var(--red); font-size: 12px; letter-spacing: 2px; font-weight: 900; }
-    .tip { background: var(--sand); padding: 28px; margin-top: 24px; border-left: 5px solid var(--orange); }
-    .button { display: inline-block; background: var(--dark); color: var(--white); padding: 13px 23px; margin-top: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: bold; border-radius: 3px; }
-    .button:hover { background: var(--red); }
-    footer { background: var(--dark); color: var(--white); padding: 40px 7% 0; }
-    .footer-main { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; padding-bottom: 30px; }
-    footer .logo { color: var(--pink); }
-    footer nav a { color: var(--white); }
-    footer .notice { margin: 0 -8.14%; background: #211e1a; padding: 15px 20px; }
-    @media(max-width:760px) {
-      header { padding: 18px 5%; }
-      nav { gap: 12px; }
-      .hero { grid-template-columns: 1fr; padding: 48px 6%; }
-      section { padding: 48px 6%; }
-      .content-grid, .dark-grid, .steps { grid-template-columns: 1fr; }
-      .hero-art { min-height: 270px; }
+
+    .notice {
+      padding: 10px 18px;
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .site-header {
+      padding: 20px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .logo {
+      text-decoration: none;
+      font-weight: 1000;
+      font-size: 1.7rem;
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+
+    .logo span { color: var(--coral); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 8px 13px;
+      border: 1.5px solid transparent;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background: var(--yellow);
+      border-color: var(--ink);
+    }
+
+    .hero {
+      width: 90%;
+      max-width: 1400px;
+      margin: 28px auto 0;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      overflow: hidden;
+      border: 2px solid var(--ink);
+      border-radius: 32px;
+      background: var(--pink);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: clamp(30px, 6vw, 76px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1.5px solid var(--ink);
+      border-radius: 30px;
+      background: var(--yellow);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(3.4rem, 7vw, 7rem);
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--coral);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: -3px;
+    }
+
+    .hero-copy p {
+      max-width: 520px;
+      margin: 0 0 25px;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 2px solid var(--ink);
+      border-radius: 40px;
+      background: var(--yellow);
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .hero-art {
+      min-height: 390px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--turquoise);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .barrier-badge {
+      width: min(80%, 330px);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 8px 8px 0 var(--ink);
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      font-weight: 1000;
+      line-height: 0.98;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-6deg);
+    }
+
+    .hero-sticker {
+      position: absolute;
+      right: 5%;
+      bottom: 12%;
+      padding: 10px 14px;
+      border: 2px solid var(--ink);
+      border-radius: 30px;
+      background: var(--pink);
+      font-size: 0.75rem;
+      font-weight: 1000;
+      transform: rotate(7deg);
+    }
+
+    .section {
+      width: 88%;
+      max-width: 1100px;
+      margin: 82px auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .mini-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      font-weight: 1000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .section-heading p { max-width: 680px; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 24px;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .feature-card:nth-child(1) { background: var(--pink); }
+    .feature-card:nth-child(2) { background: var(--yellow); }
+    .feature-card:nth-child(3) { background: var(--turquoise); }
+
+    .feature-card .emoji {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+      letter-spacing: -0.8px;
+    }
+
+    .feature-card p { margin-bottom: 0; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .content-panel {
+      padding: clamp(25px, 4vw, 42px);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--turquoise);
+    }
+
+    .content-panel.pink { background: var(--pink); }
+    .content-panel.yellow { background: var(--yellow); }
+
+    .content-panel h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+
+    .content-panel ul,
+    .content-panel ol { padding-left: 22px; }
+
+    .content-panel li { margin-bottom: 12px; }
+
+    .routine-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: routine;
+    }
+
+    .routine-list li {
+      counter-increment: routine;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .routine-list li::before {
+      content: counter(routine, decimal-leading-zero);
+      display: flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      font-weight: 1000;
+    }
+
+    .routine-list p { margin: 5px 0 0; }
+
+    .callout {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 6px solid var(--coral);
+      border-radius: 0 14px 14px 0;
+      background: var(--white);
+    }
+
+    .faq {
+      padding: 22px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .faq h3 {
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+      letter-spacing: -0.5px;
+    }
+
+    .faq p { margin-bottom: 0; }
+
+    footer {
+      margin-top: 90px;
+      padding: 38px 6% 24px;
+      border-top: 2px solid var(--ink);
+      background: var(--pink);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-top p { max-width: 450px; }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      font-weight: 800;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .footer-notice {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1.5px solid var(--ink);
+      font-size: 0.76rem;
+    }
+
+    @media (max-width: 850px) {
+      .site-header { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { min-height: 300px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .site-header { padding: 18px 5%; }
+      nav a { padding: 7px 10px; font-size: 0.8rem; }
+      .hero { width: 92%; border-radius: 22px; }
+      .hero-copy { padding: 30px 22px; }
+      h1 { font-size: clamp(3.1rem, 15vw, 4.8rem); }
+      .section { width: 90%; margin: 62px auto; }
     }
   </style>
 </head>
 <body>
-  <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+  <div class="notice">
+    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+  </div>
 
-  <header>
-    <a class="logo" href="index.html">SUNBLEACH</a>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Sunbleach home">sunbleach<span>®</span></a>
     <nav aria-label="Main navigation">
-      <a href="index.html">HOME</a>
-      <a href="moisturizer.html">MOISTURIZER</a>
-      <a href="sunscreen.html">SUNSCREEN</a>
-      <a href="barrier.html">SKIN BARRIER</a>
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html">Sunscreen</a>
+      <a href="barrier.html" aria-current="page">Skin Barrier</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div>
-        <div class="eyebrow">The desert skin journal · Skin basics</div>
-        <h1>How to repair your skin barrier.</h1>
-        <p>Does your skin feel tight after washing, sting when you apply products, or seem unusually dry and sensitive? Your skin barrier may need a gentler routine.</p>
-        <p>Learn what the barrier does, what can disrupt it, and how to give your skin a chance to recover without overwhelming it with more products.</p>
-        <a class="button" href="#routine">Explore a gentle routine</a>
+      <div class="hero-copy">
+        <span class="eyebrow">Skin comfort starts here</span>
+        <h1>Keep your<br><span>barrier happy.</span></h1>
+        <p>
+          Dry air, over-cleansing, and too many active ingredients can leave
+          skin feeling tight or irritated. The reset? Keep things gentle,
+          moisturize consistently, and give your skin time.
+        </p>
+        <a class="button" href="#barrier-basics">Meet your barrier ↗</a>
       </div>
-      <div class="hero-art" role="img" aria-label="Illustration of a warm Arizona sunset over desert hills">
-        <div class="sun"></div>
-        <div class="hill"></div>
-        <div class="hill two"></div>
-        <div class="art-label">KEEP IT GENTLE</div>
+
+      <div class="hero-art" aria-label="Decorative skin barrier graphic">
+        <div class="barrier-badge">Barrier<br>care club</div>
+        <span class="hero-sticker">GENTLE IS GOOD</span>
       </div>
     </section>
 
-    <section>
-      <div class="intro">
-        <div class="eyebrow">The basics</div>
-        <h2>What is your skin barrier?</h2>
-        <p>Your skin barrier is the outermost layer of your skin. It helps limit water loss and protects against irritants from the environment. When it is disrupted, skin may feel dry, rough, tight, or more sensitive than usual.</p>
+    <section class="section" id="barrier-basics">
+      <div class="section-heading">
+        <span class="mini-label">Let's get into it</span>
+        <h2>Your skin has a built-in bestie.</h2>
+        <p>
+          The skin barrier is the outermost part of your skin. It helps keep
+          water in and protect your body from outside irritants. When it is
+          not functioning well, skin may feel dry, tight, flaky, or sensitive.
+        </p>
       </div>
-      <div class="content-grid">
-        <article class="card">
-          <h3>Signs your skin needs a break</h3>
-          <ul>
-            <li>Dryness or tightness, especially after cleansing.</li>
-            <li>Flaking or rough patches that are new for you.</li>
-            <li>Stinging or burning when applying products that usually feel comfortable.</li>
-            <li>Redness or sensitivity that seems worse after using several active products.</li>
-          </ul>
-          <p>These signs can have different causes, so they do not confirm a damaged skin barrier on their own.</p>
-        </article>
-        <article class="card">
-          <h3>What can disrupt the barrier?</h3>
-          <ul>
-            <li>Frequent washing with harsh cleansers or very hot water.</li>
-            <li>Overusing exfoliating acids, scrubs, or retinoid products.</li>
-            <li>Dry environmental conditions and low humidity.</li>
-            <li>Using products that irritate your skin or do not suit your skin type.</li>
-          </ul>
-          <p>In a desert climate, dry air and long periods in air conditioning can make moisture loss especially noticeable.</p>
-        </article>
-      </div>
-    </section>
 
-    <section class="dark-section">
-      <div class="intro">
-        <div class="eyebrow">Back to the basics</div>
-        <h2>Three habits that support your skin.</h2>
-        <p>You do not need an elaborate routine to care for your skin barrier. Start with gentle cleansing, regular moisturizing, and daily sun protection.</p>
-      </div>
-      <div class="dark-grid">
-        <article class="dark-card">
-          <h3>Keep cleansing gentle</h3>
-          <p>Choose a mild cleanser, use lukewarm water, and avoid scrubbing. Wash according to your skin's needs rather than repeatedly trying to remove every trace of oil.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">💧</span>
+          <h3>Helps hold in moisture</h3>
+          <p>
+            A healthy skin barrier helps reduce water loss and supports skin
+            that feels soft and comfortable.
+          </p>
         </article>
-        <article class="dark-card">
-          <h3>Moisturize consistently</h3>
-          <p>Look for a moisturizer with ingredients such as glycerin, ceramides, or suitable emollients. Apply after washing to help reduce water loss and improve comfort.</p>
+
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">🛡️</span>
+          <h3>Helps keep irritants out</h3>
+          <p>
+            The outer skin layer acts as a protective barrier against many
+            environmental irritants.
+          </p>
         </article>
-        <article class="dark-card">
-          <h3>Pause irritating extras</h3>
-          <p>If your skin is stinging or peeling, consider temporarily pausing exfoliants and other nonessential active products until it feels comfortable again.</p>
+
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">🌵</span>
+          <h3>Dry weather can be a factor</h3>
+          <p>
+            Low humidity, hot showers, harsh cleansers, and overusing exfoliating
+            products may contribute to dryness or irritation.
+          </p>
         </article>
       </div>
     </section>
 
-    <section id="routine" class="routine">
-      <div class="intro">
-        <div class="eyebrow">Your reset routine</div>
-        <h2>A simple morning and evening plan.</h2>
-        <p>Give your routine time to work. Introduce new products one at a time, and stop using anything that causes persistent irritation.</p>
+    <section class="section split">
+      <article class="content-panel pink">
+        <span class="mini-label">Signs to notice</span>
+        <h2>When your skin wants a reset.</h2>
+        <ul>
+          <li>Skin feels tight after washing.</li>
+          <li>Dry patches or flaking appear.</li>
+          <li>Products that usually feel fine start to sting.</li>
+          <li>Your skin feels unusually rough or uncomfortable.</li>
+        </ul>
+        <div class="callout">
+          These signs can have different causes and do not confirm that your
+          skin barrier is damaged. Persistent or severe symptoms deserve
+          advice from a qualified healthcare professional.
+        </div>
+      </article>
+
+      <article class="content-panel yellow">
+        <span class="mini-label">The routine reset</span>
+        <h2>Less drama. More consistency.</h2>
+        <p>
+          You do not need to add five new products at once. Start with a gentle
+          cleanser, a moisturizer that suits your skin, and daytime sunscreen.
+        </p>
+        <p>
+          Consider pausing exfoliating acids, scrubs, or other potentially
+          irritating products if your skin is feeling sensitive. Reintroduce
+          products gradually once your skin is comfortable again.
+        </p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="mini-label">Your simple routine</span>
+        <h2>Three steps. No overthinking.</h2>
+        <p>
+          A basic routine can help you avoid adding unnecessary irritation
+          while supporting your skin's natural barrier.
+        </p>
       </div>
-      <div class="steps">
-        <article class="step">
-          <div class="step-number">MORNING</div>
-          <h3>Cleanse if needed</h3>
-          <p>Use a gentle cleanser or rinse with lukewarm water if that works for your skin. Apply a moisturizer that feels comfortable.</p>
-        </article>
-        <article class="step">
-          <div class="step-number">EVERY DAY</div>
-          <h3>Protect your skin</h3>
-          <p>Use broad-spectrum SPF 30 or higher. Reapply at least every two hours outdoors and after swimming or sweating, following the product label.</p>
-        </article>
-        <article class="step">
-          <div class="step-number">EVENING</div>
-          <h3>Cleanse and moisturize</h3>
-          <p>Gently remove sunscreen and makeup, then apply moisturizer. Keep the rest of your routine simple while your skin settles.</p>
-        </article>
-      </div>
-      <div class="tip">
-        <h3>When to get professional advice</h3>
-        <p>If your skin is severely painful, swollen, cracking, oozing, or not improving, speak with a healthcare professional or dermatologist. Persistent irritation may need more than a skincare routine change.</p>
-        <a class="button" href="moisturizer.html">Explore summer hydration</a>
+
+      <article class="content-panel">
+        <ol class="routine-list">
+          <li>
+            <div>
+              <strong>Cleanse without stripping.</strong>
+              <p>
+                Choose a gentle cleanser and use lukewarm rather than very
+                hot water. Avoid scrubbing your skin.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Moisturize consistently.</strong>
+              <p>
+                Look for a moisturizer that suits your skin. Ingredients such
+                as glycerin, ceramides, and petrolatum may help support
+                hydration and reduce moisture loss.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Protect your skin during the day.</strong>
+              <p>
+                Use a broad-spectrum sunscreen of SPF 30 or higher, follow its
+                directions, and combine it with shade and protective clothing.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="content-panel turquoise">
+        <span class="mini-label">The Sunbleach approach</span>
+        <h2>Desert-inspired. Skin-comfort focused.</h2>
+        <p>
+          Sunbleach is a fictional skincare brand inspired by Scottsdale,
+          Arizona. Our imagined lineup takes inspiration from prickly pear,
+          jojoba, and blue agave, with a focus on gentle cleansing,
+          everyday hydration, and sun protection.
+        </p>
+        <p>
+          These ingredients are part of the brand's creative direction, not
+          proof that a particular formula repairs the skin barrier. Sunbleach
+          products are concepts for an educational project, not real products.
+        </p>
+        <a class="button" href="moisturizer.html">Explore the moisturizer guide ↗</a>
       </div>
     </section>
 
-    <section>
-      <div class="intro">
-        <div class="eyebrow">The Sunbleach philosophy</div>
-        <h2>More care. Less overthinking.</h2>
-        <p>Our fictional desert skincare line is built around the idea that a routine should work with your environment, not against your skin. Gentle cleansing, comfortable moisture, and consistent sun protection are the foundation. Everything else is optional.</p>
-        <a class="button" href="index.html">Back to Sunbleach</a>
+    <section class="section">
+      <div class="section-heading">
+        <span class="mini-label">Frequently asked questions</span>
+        <h2>Barrier care, decoded.</h2>
+      </div>
+
+      <div class="faq">
+        <h3>How long does it take for a skin barrier to recover?</h3>
+        <p>
+          It depends on what is causing the irritation and how severe it is.
+          Mild dryness may improve with a gentler routine, while ongoing
+          irritation may need professional advice.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>Should I stop using all my skin care products?</h3>
+        <p>
+          Not necessarily. Simplifying your routine can help you identify
+          potential irritants. Focus on gentle cleansing, moisturizing, and
+          sun protection, and pause products that seem to worsen symptoms.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>Are fragrance-free products better?</h3>
+        <p>
+          Fragrance-free products may be a useful option if your skin is
+          sensitive or easily irritated. However, no single label guarantees
+          that a product will work for everyone.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content-panel">
+        <span class="mini-label">Keep the glow going</span>
+        <h2>Give dry skin a little love.</h2>
+        <p>
+          If your skin feels tight in the desert heat, explore how to choose a
+          moisturizer that fits your skin type and your summer routine.
+        </p>
+        <a class="button" href="moisturizer.html">Read the moisturizer guide ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-main">
+    <div class="footer-top">
       <div>
-        <a class="logo" href="index.html">SUNBLEACH</a>
-        <p>Desert-inspired skincare.<br>Made for sunny days and everyday skin.</p>
-        <p>Scottsdale, Arizona · A fictional brand</p>
+        <a class="logo" href="index.html">sunbleach<span>®</span></a>
+        <p>Desert-inspired skincare ideas for sunny days, dry air, and everyday routines.</p>
       </div>
-      <nav aria-label="Footer navigation">
-        <a href="index.html">HOME</a>
-        <a href="moisturizer.html">MOISTURIZER</a>
-        <a href="sunscreen.html">SUNSCREEN</a>
-        <a href="barrier.html">SKIN BARRIER</a>
-      </nav>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="moisturizer.html">Moisturizer</a>
+        <a href="sunscreen.html">Sunscreen</a>
+        <a href="barrier.html">Skin Barrier</a>
+      </div>
     </div>
-    <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+    <div class="footer-notice">
+      This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
   </footer>
 </body>
 </html>
