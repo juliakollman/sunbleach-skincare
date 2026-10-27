@@ -5,268 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn what your skin barrier does and discover simple skincare habits for dry desert climates.">
-  <title>Skin Barrier Repair Guide | Sunbleach</title>
+  <title>How to Support Your Skin Barrier | Sunbleach</title>
   <style>
     :root {
-      --cream: #FFF8EF;
-      --sand: #FFE3C2;
-      --terra: #FF684A;
-      --dark: #35213A;
-      --sage: #238F7B;
-      --white: #FFFFFF;
-      --pink: #FFB7C5;
-      --yellow: #FFD85A;
-      --turquoise: #76D9C3;
+      --cream:#FFF8EF; --sand:#FFE3C2; --terra:#FF684A; --dark:#35213A;
+      --sage:#238F7B; --white:#FFFFFF; --pink:#FFB7C5; --yellow:#FFD85A; --turquoise:#76D9C3;
     }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--dark);
-      font: 16px/1.75 "Trebuchet MS", Arial, sans-serif;
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--dark); font:16px/1.75 "Trebuchet MS",Arial,sans-serif; }
+    a { color:inherit; }
+    .notice { background:var(--dark); color:var(--white); text-align:center; padding:10px 16px; font-size:.78rem; line-height:1.5; }
+    header { padding:20px 6%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px; }
+    .logo { font-family:"Arial Black","Trebuchet MS",sans-serif; font-size:2rem; font-weight:900; letter-spacing:3px; text-decoration:none; }
+    .logo span { color:var(--terra); }
+    nav { display:flex; flex-wrap:wrap; gap:16px; }
+    nav a { text-decoration:none; font-size:.9rem; font-weight:bold; }
+    nav a:hover, footer nav a:hover { text-decoration:underline; text-underline-offset:4px; }
+    .hero { background:linear-gradient(120deg,#FFB7C5,#FFCA92 52%,#FFD85A); padding:75px 8%; }
+    .hero-content { max-width:800px; }
+    .eyebrow { color:#C83D35; text-transform:uppercase; font-size:.78rem; letter-spacing:2px; font-weight:900; }
+    h1,h2,h3 { font-family:"Arial Black","Trebuchet MS",sans-serif; line-height:1.15; font-weight:900; letter-spacing:-1px; }
+    h1 { font-size:clamp(2.5rem,7vw,4.6rem); letter-spacing:-2px; margin:12px 0 20px; }
+    h2 { font-size:clamp(2rem,4vw,2.8rem); }
+    h3 { font-size:1.4rem; margin-bottom:10px; }
+    p { margin-top:0; }
+    section { padding:55px 8%; }
+    .button { display:inline-block; background:var(--terra); color:var(--white); text-decoration:none; padding:12px 20px; margin-top:8px; border:2px solid var(--terra); border-radius:50px; font-weight:bold; }
+    .button:hover { background:#D94337; border-color:#D94337; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:35px; align-items:center; }
+    .panel { background:#B9EADF; border-radius:16px; padding:28px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card { background:var(--white); padding:22px; border:2px solid #F2D7CE; border-radius:16px; box-shadow:0 6px 16px rgba(53,33,58,.05); }
+    .swatch { min-height:100px; border-radius:12px; margin-bottom:18px; display:flex; align-items:center; justify-content:center; background:#FFE0B9; font-family:"Arial Black","Trebuchet MS",sans-serif; font-size:1rem; letter-spacing:1px; text-align:center; padding:12px; }
+    .callout { border-left:5px solid var(--terra); padding:5px 0 5px 20px; margin:25px 0; }
+    .pink-section { background:#FFE3EC; }
+    .yellow-section { background:#FFE6B4; }
+    .steps { counter-reset:step; list-style:none; padding:0; }
+    .steps li { counter-increment:step; margin:0 0 18px; padding:18px 20px 18px 65px; background:var(--white); border:2px solid #F2D7CE; border-radius:16px; position:relative; }
+    .steps li::before { content:counter(step); position:absolute; left:18px; top:17px; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--yellow); font-weight:900; }
+    .faq-item { border-bottom:2px solid #F2D7CE; padding:18px 0; }
+    .faq-item h3 { margin-top:0; }
+    footer { background:var(--dark); color:var(--white); padding:35px 8%; }
+    footer nav { margin:18px 0; }
+    footer nav a { color:var(--white); }
+    .footer-note { color:#F5E7F0; font-size:.8rem; }
+    .small-note { font-size:.88rem; }
+    @media (max-width:760px) {
+      header { justify-content:center; text-align:center; }
+      nav { justify-content:center; gap:12px; }
+      .hero { padding:50px 7%; }
+      section { padding:40px 7%; }
+      .split,.cards { grid-template-columns:1fr; }
     }
-
-    a { color: inherit; }
-
-    .notice {
-      background: var(--dark);
-      color: var(--white);
-      text-align: center;
-      padding: 10px 16px;
-      font-size: .78rem;
-      line-height: 1.5;
-    }
-
-    header {
-      padding: 20px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .logo {
-      font-family: "Arial Black", "Trebuchet MS", sans-serif;
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-decoration: none;
-    }
-
-    .logo span { color: var(--terra); }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: bold;
-    }
-
-    nav a:hover,
-    footer nav a:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .hero {
-      background: linear-gradient(120deg, #FFB7C5, #FFCA92 52%, #FFD85A);
-      padding: 75px 8%;
-    }
-
-    .hero-content { max-width: 800px; }
-
-    .eyebrow {
-      color: #C83D35;
-      text-transform: uppercase;
-      font-size: .78rem;
-      letter-spacing: 2px;
-      font-weight: 900;
-    }
-
-    h1, h2, h3 {
-      font-family: "Arial Black", "Trebuchet MS", sans-serif;
-      line-height: 1.15;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 7vw, 4.6rem);
-      letter-spacing: -2px;
-      margin: 12px 0 20px;
-    }
-
-    h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
-
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    p { margin-top: 0; }
-
-    section { padding: 55px 8%; }
-
-    .button {
-      display: inline-block;
-      background: var(--terra);
-      color: var(--white);
-      text-decoration: none;
-      padding: 12px 20px;
-      margin-top: 8px;
-      border: 2px solid var(--terra);
-      border-radius: 50px;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #D94337;
-      border-color: #D94337;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .panel {
-      background: #B9EADF;
-      border-radius: 16px;
-      padding: 28px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--white);
-      padding: 22px;
-      border: 2px solid #F2D7CE;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(53, 33, 58, .05);
-    }
-
-    .swatch {
-      min-height: 100px;
-      border-radius: 12px;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #FFE0B9;
-      font-family: "Arial Black", "Trebuchet MS", sans-serif;
-      font-size: 1rem;
-      letter-spacing: 1px;
-      text-align: center;
-      padding: 12px;
-    }
-
-    .callout {
-      border-left: 5px solid var(--terra);
-      padding: 5px 0 5px 20px;
-      margin: 25px 0;
-    }
-
-    .pink-section { background: #FFE3EC; }
-    .yellow-section { background: #FFE6B4; }
-
-    .steps {
-      counter-reset: step;
-      list-style: none;
-      padding: 0;
-    }
-
-    .steps li {
-      counter-increment: step;
-      margin: 0 0 18px;
-      padding: 18px 20px 18px 65px;
-      background: var(--white);
-      border: 2px solid #F2D7CE;
-      border-radius: 16px;
-      position: relative;
-    }
-
-    .steps li::before {
-      content: counter(step);
-      position: absolute;
-      left: 18px;
-      top: 17px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--yellow);
-      font-weight: 900;
-    }
-
-    .faq-item {
-      border-bottom: 2px solid #F2D7CE;
-      padding: 18px 0;
-    }
-
-    .faq-item h3 { margin-top: 0; }
-
-    footer {
-      background: var(--dark);
-      color: var(--white);
-      padding: 35px 8%;
-    }
-
-    footer nav { margin: 18px 0; }
-
-    footer nav a { color: var(--white); }
-
-    .footer-note {
-      color: #F5E7F0;
-      font-size: .8rem;
-    }
-
-    @media (max-width: 760px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .hero { padding: 50px 7%; }
-
-      section { padding: 40px 7%; }
-
-      .split,
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
-  <div class="notice">
-    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
-  </div>
+  <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
 
   <header>
     <a class="logo" href="index.html">SUN<span>BLEACH</span></a>
@@ -295,9 +91,7 @@
           <h2>What is your skin barrier?</h2>
           <p>Your skin barrier is the outermost layer of your skin. It helps keep moisture in and protect your skin from irritants and things in the environment.</p>
           <p>When the barrier is struggling, skin may feel dry, rough, tight, flaky, or more sensitive than usual. Those signs can have different causes, so pay attention to what your skin is telling you.</p>
-          <div class="callout">
-            <strong>The goal:</strong> keep your routine gentle, support hydration, and avoid doing too much at once.
-          </div>
+          <div class="callout"><strong>The goal:</strong> keep your routine gentle, support hydration, and avoid doing too much at once.</div>
         </div>
         <div class="panel">
           <p class="eyebrow">Desert skin reality</p>
@@ -392,28 +186,24 @@
           <p>Ceramides are lipids naturally found in the skin barrier. Skincare products containing ceramides are designed to support the skin's moisture barrier.</p>
         </article>
       </div>
-      <p style="margin-top:24px;">Ingredients work differently depending on the full formula and the person using it. Choose products that fit your skin, and patch test new products when appropriate.</p>
+      <p style="margin-top:24px;">Ingredients work differently depending on the full formula and the person using them. Choose products that fit your skin, and patch test new products when appropriate.</p>
     </section>
 
     <section class="pink-section">
       <p class="eyebrow">Common questions</p>
       <h2>Barrier repair FAQs</h2>
-
       <div class="faq-item">
         <h3>How long does it take to improve a skin barrier?</h3>
         <p>It depends on what is causing the irritation or dryness. A gentle routine may help, but there is no single timeline that works for everyone. Persistent symptoms may need professional advice.</p>
       </div>
-
       <div class="faq-item">
         <h3>Should I stop using exfoliating products?</h3>
         <p>If your skin is irritated, stinging, or unusually dry, consider pausing exfoliating products until your skin feels comfortable again. If symptoms continue, seek advice from a dermatologist.</p>
       </div>
-
       <div class="faq-item">
         <h3>Can I still use active ingredients?</h3>
         <p>It depends on your skin and the product. If your skin is feeling sensitive, keeping things simple can help you avoid additional irritation. Reintroduce products gradually if appropriate.</p>
       </div>
-
       <div class="faq-item">
         <h3>Is moisturizer enough to protect my skin?</h3>
         <p>Moisturizer helps with hydration, but it doesn't replace sunscreen or other sun-protective habits. A simple routine usually includes gentle cleansing, moisturizing, and daytime sun protection.</p>
@@ -440,6 +230,7 @@
       <a href="barrier-repair.html">Barrier Repair</a>
     </nav>
     <p class="footer-note">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    <p class="footer-note">Sunbleach is a fictional skincare brand. Product descriptions and formulations are educational concepts, not real products or tested skincare advice.</p>
   </footer>
 </body>
 </html>
