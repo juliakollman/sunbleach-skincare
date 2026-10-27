@@ -44,7 +44,181 @@
       section { padding:40px 7%; }
       .split,.cards { grid-template-columns:1fr; }
     }
-  </style>
+ 
+/* SUNBLEACH — BRIGHT DESERT BEAUTY UPDATE */
+
+:root {
+  --cream: #FFF8EF;
+  --sand: #FFE3C2;
+  --terracotta: #FF684A;
+  --terra: #FF684A;
+  --dark: #35213A;
+  --sage: #238F7B;
+  --white: #FFFFFF;
+}
+
+/* Cleaner, more modern typography */
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.75;
+}
+
+h1, h2, h3 {
+  font-family: "Arial Black", "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.12;
+}
+
+h1 {
+  letter-spacing: -2px;
+}
+
+.logo {
+  font-family: "Arial Black", "Trebuchet MS", sans-serif;
+  letter-spacing: 3px;
+}
+
+/* Bright sunset hero */
+.hero {
+  background: linear-gradient(
+    125deg,
+    #FFB7C5 0%,
+    #FFCA92 48%,
+    #FFD85A 100%
+  );
+}
+
+.eyebrow {
+  color: #C83D35;
+  letter-spacing: 2.2px;
+  font-weight: 900;
+}
+
+/* Bold, playful buttons */
+.button {
+  background: #FF684A;
+  color: #FFFFFF;
+  border: 2px solid #FF684A;
+  border-radius: 50px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  background: #D94337;
+  border-color: #D94337;
+  transform: translateY(-2px);
+}
+
+.button.secondary {
+  background: #FFF8EF;
+  color: #35213A;
+  border-color: #35213A;
+}
+
+.button.secondary:hover {
+  background: #FFD85A;
+  color: #35213A;
+  border-color: #35213A;
+}
+
+/* More colorful product cards */
+.card {
+  background: #FFFFFF;
+  border: 2px solid #F2D7CE;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(53, 33, 58, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(53, 33, 58, 0.10);
+}
+
+.product-art,
+.swatch {
+  border-radius: 12px;
+}
+
+.art-one,
+.swatch {
+  background-color: #FFE0B9;
+}
+
+.art-two {
+  background-color: #A8E5D5;
+}
+
+.art-three {
+  background-color: #FFB7C5;
+}
+
+/* Bright editorial sections */
+.feature-panel,
+.panel {
+  background: #B9EADF;
+  border-radius: 16px;
+}
+
+.quiz {
+  background: #FFE3EC;
+}
+
+.stores {
+  background: #D5F2E9;
+}
+
+section[style*="background:#eee1d0"] {
+  background: #FFE6D5 !important;
+}
+
+section[style*="background:#dfe2d4"] {
+  background: #D5F2E9 !important;
+}
+
+/* Links and ingredient tags */
+.text-link {
+  color: #D94337;
+}
+
+.ingredient-list span {
+  background: #FFFFFF;
+  border: 1px solid #76D9C3;
+  border-radius: 50px;
+}
+
+/* Dark plum footer */
+.notice,
+footer {
+  background: #35213A;
+  color: #FFFFFF;
+}
+
+footer nav a {
+  color: #FFFFFF;
+}
+
+footer .logo {
+  color: #FFD85A !important;
+}
+
+.footer-note {
+  color: #F5E7F0;
+}
+
+/* Keep animations comfortable on mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+ </style>
 </head>
 <body>
   <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
