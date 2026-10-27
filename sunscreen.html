@@ -9,8 +9,6 @@
   <title>Mineral Sunscreen With No White Cast | Sunbleach</title>
 
   <style>
-    /* SUNBLEACH — BRIGHT DESERT BEAUTY */
-
     :root {
       --cream: #FFF8EF;
       --coral: #FF684A;
@@ -41,10 +39,6 @@
       line-height: 1.75;
     }
 
-    img {
-      max-width: 100%;
-    }
-
     a {
       color: inherit;
     }
@@ -57,7 +51,7 @@
     }
 
     h1 {
-      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-size: clamp(3rem, 6vw, 5.5rem);
       letter-spacing: -2px;
       margin: 12px 0 22px;
     }
@@ -86,7 +80,8 @@
     }
 
     header {
-      padding: 20px 6%;
+      min-height: 116px;
+      padding: 24px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -95,11 +90,23 @@
     }
 
     .logo {
+      display: inline-flex;
+      align-items: center;
       font-family: "Arial Black", "Trebuchet MS", Arial, sans-serif;
-      font-size: 1.9rem;
+      font-size: 2.5rem;
       font-weight: 900;
+      line-height: 1;
       letter-spacing: 3px;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .logo-sun {
+      color: var(--dark);
+    }
+
+    .logo-bleach {
+      color: var(--coral);
     }
 
     nav {
@@ -111,13 +118,12 @@
 
     nav a {
       text-decoration: none;
-      font-size: 0.92rem;
+      font-size: 1rem;
       font-weight: bold;
       transition: color 0.2s ease;
     }
 
-    nav a:hover,
-    .text-link:hover {
+    nav a:hover {
       color: var(--dark-coral);
     }
 
@@ -128,11 +134,11 @@
         #FFCA92 48%,
         var(--yellow) 100%
       );
-      padding: 85px 8%;
+      padding: 100px 8%;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 1100px;
     }
 
     .eyebrow {
@@ -144,9 +150,14 @@
       margin-bottom: 12px;
     }
 
+    .hero h1 {
+      max-width: 1050px;
+    }
+
     .hero p:not(.eyebrow) {
-      max-width: 720px;
-      font-size: 1.08rem;
+      max-width: 1000px;
+      font-size: 1.15rem;
+      line-height: 1.8;
     }
 
     .button {
@@ -155,7 +166,7 @@
       color: var(--white);
       border: 2px solid var(--coral);
       border-radius: 50px;
-      padding: 12px 24px;
+      padding: 15px 25px;
       margin-top: 8px;
       font-weight: 900;
       text-decoration: none;
@@ -176,7 +187,6 @@
 
     .button.secondary:hover {
       background: var(--yellow);
-      color: var(--dark);
     }
 
     section {
@@ -184,7 +194,7 @@
     }
 
     .section-intro {
-      max-width: 760px;
+      max-width: 800px;
       margin-bottom: 30px;
     }
 
@@ -207,10 +217,6 @@
 
     .panel.yellow {
       background: var(--yellow);
-    }
-
-    .panel.coral {
-      background: #FFDFD4;
     }
 
     .cards {
@@ -250,16 +256,12 @@
       padding: 14px;
     }
 
-    .swatch.yellow {
-      background: var(--yellow);
-    }
-
     .swatch.turquoise {
       background: var(--turquoise);
     }
 
-    .swatch.coral {
-      background: #FFDFD4;
+    .swatch.yellow {
+      background: var(--yellow);
     }
 
     .text-link {
@@ -272,10 +274,6 @@
       border-left: 5px solid var(--green);
       padding: 8px 0 8px 22px;
       margin: 25px 0;
-    }
-
-    .callout h3 {
-      margin-bottom: 8px;
     }
 
     .ingredient-list {
@@ -296,7 +294,7 @@
     }
 
     .faq-item {
-      padding: 20px 0;
+      padding: 22px 0;
       border-bottom: 2px solid var(--border);
     }
 
@@ -315,12 +313,12 @@
     .closing-cta {
       background: var(--pink);
       border-radius: 22px;
-      padding: 38px;
+      padding: 40px;
       text-align: center;
     }
 
     .closing-cta p {
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 18px;
     }
 
@@ -330,8 +328,16 @@
       padding: 40px 8%;
     }
 
+    footer .logo-sun {
+      color: var(--white);
+    }
+
+    footer .logo-bleach {
+      color: var(--coral);
+    }
+
     footer nav {
-      margin: 20px 0;
+      margin: 22px 0;
     }
 
     footer nav a {
@@ -339,10 +345,6 @@
     }
 
     footer nav a:hover {
-      color: var(--yellow);
-    }
-
-    footer .logo {
       color: var(--yellow);
     }
 
@@ -354,8 +356,13 @@
 
     @media (max-width: 800px) {
       header {
+        min-height: auto;
         justify-content: center;
         text-align: center;
+      }
+
+      .logo {
+        font-size: 2rem;
       }
 
       nav {
@@ -364,7 +371,11 @@
       }
 
       .hero {
-        padding: 58px 7%;
+        padding: 60px 7%;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 9vw, 4rem);
       }
 
       section {
@@ -403,7 +414,7 @@
   </div>
 
   <header>
-    <a class="logo" href="index.html">SUNBLEACH</a>
+    <a class="logo" href="index.html" aria-label="Sunbleach Home"><span class="logo-sun">SUN</span><span class="logo-bleach">BLEACH</span></a>
 
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -648,7 +659,7 @@
   </main>
 
   <footer>
-    <a class="logo" href="index.html">SUNBLEACH</a>
+    <a class="logo" href="index.html" aria-label="Sunbleach Home"><span class="logo-sun">SUN</span><span class="logo-bleach">BLEACH</span></a>
 
     <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
