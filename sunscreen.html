@@ -5,19 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Searching for mineral sunscreen with no white cast? Learn about zinc oxide, tinted formulas, application tips, and daily sun protection for desert living.">
+  <meta name="theme-color" content="#FFF8EF">
   <title>Mineral Sunscreen With No White Cast | Sunbleach</title>
 
   <style>
+    /* SUNBLEACH — BRIGHT DESERT BEAUTY */
+
     :root {
       --cream: #FFF8EF;
-      --sand: #FFE3C2;
-      --terra: #FF684A;
-      --dark: #35213A;
-      --sage: #238F7B;
-      --white: #FFFFFF;
+      --coral: #FF684A;
       --pink: #FFB7C5;
       --yellow: #FFD85A;
       --turquoise: #76D9C3;
+      --dark: #35213A;
+      --dark-coral: #D94337;
+      --green: #238F7B;
+      --white: #FFFFFF;
+      --border: #F2D7CE;
     }
 
     * {
@@ -32,19 +36,52 @@
       margin: 0;
       background: var(--cream);
       color: var(--dark);
-      font: 16px/1.75 "Trebuchet MS", Arial, sans-serif;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     a {
       color: inherit;
     }
 
+    h1, h2, h3 {
+      font-family: "Arial Black", "Trebuchet MS", Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: -1.2px;
+      line-height: 1.12;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      letter-spacing: -2px;
+      margin: 12px 0 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      margin: 12px 0 22px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
     .notice {
       background: var(--dark);
-      color: white;
+      color: var(--white);
       text-align: center;
       padding: 10px 16px;
-      font-size: .78rem;
+      font-size: 0.78rem;
       line-height: 1.5;
     }
 
@@ -58,201 +95,264 @@
     }
 
     .logo {
-      font-family: "Arial Black", "Trebuchet MS", sans-serif;
-      font-size: 2rem;
+      font-family: "Arial Black", "Trebuchet MS", Arial, sans-serif;
+      font-size: 1.9rem;
       font-weight: 900;
       letter-spacing: 3px;
       text-decoration: none;
     }
 
-    .logo span {
-      color: var(--terra);
-    }
-
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      align-items: center;
+      gap: 12px 20px;
     }
 
     nav a {
       text-decoration: none;
-      font-size: .9rem;
+      font-size: 0.92rem;
       font-weight: bold;
+      transition: color 0.2s ease;
     }
 
     nav a:hover,
     .text-link:hover {
-      color: var(--terra);
+      color: var(--dark-coral);
     }
 
     .hero {
       background: linear-gradient(
-        120deg,
-        #FFB7C5,
-        #FFCA92 52%,
-        #FFD85A
+        125deg,
+        var(--pink) 0%,
+        #FFCA92 48%,
+        var(--yellow) 100%
       );
-      padding: 75px 8%;
+      padding: 85px 8%;
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .eyebrow {
-      color: #C83D35;
+      color: var(--dark-coral);
       text-transform: uppercase;
-      font-size: .78rem;
-      letter-spacing: 2px;
+      font-size: 0.78rem;
+      letter-spacing: 2.2px;
       font-weight: 900;
+      margin-bottom: 12px;
     }
 
-    h1, h2, h3 {
-      font-family: "Arial Black", "Trebuchet MS", sans-serif;
-      line-height: 1.15;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 7vw, 4.6rem);
-      letter-spacing: -2px;
-      margin: 12px 0 20px;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    section {
-      padding: 55px 8%;
+    .hero p:not(.eyebrow) {
+      max-width: 720px;
+      font-size: 1.08rem;
     }
 
     .button {
       display: inline-block;
-      background: var(--terra);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      margin-top: 8px;
-      border: 2px solid var(--terra);
+      background: var(--coral);
+      color: var(--white);
+      border: 2px solid var(--coral);
       border-radius: 50px;
-      font-weight: bold;
-      transition: transform .2s ease, background .2s ease;
+      padding: 12px 24px;
+      margin-top: 8px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .button:hover {
-      background: #D94337;
-      border-color: #D94337;
+      background: var(--dark-coral);
+      border-color: var(--dark-coral);
       transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--dark);
+      border-color: var(--dark);
+    }
+
+    .button.secondary:hover {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 30px;
     }
 
     .split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 38px;
       align-items: center;
     }
 
     .panel {
       background: #B9EADF;
-      border-radius: 16px;
-      padding: 28px;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .panel.pink {
+      background: var(--pink);
+    }
+
+    .panel.yellow {
+      background: var(--yellow);
+    }
+
+    .panel.coral {
+      background: #FFDFD4;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 22px;
+      margin-top: 28px;
     }
 
     .card {
       background: var(--white);
-      padding: 22px;
-      border: 2px solid #F2D7CE;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(53, 33, 58, .06);
-      transition: transform .2s ease, box-shadow .2s ease;
+      padding: 24px;
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(53, 33, 58, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(53, 33, 58, .10);
+      box-shadow: 0 12px 24px rgba(53, 33, 58, 0.1);
     }
 
     .swatch {
-      min-height: 110px;
-      border-radius: 12px;
-      margin-bottom: 18px;
+      min-height: 125px;
+      border-radius: 14px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #FFE0B9;
-      font: 900 1rem "Arial Black", "Trebuchet MS", sans-serif;
+      background: var(--pink);
+      color: var(--dark);
+      font-family: "Arial Black", "Trebuchet MS", Arial, sans-serif;
+      font-size: 1.15rem;
       letter-spacing: 1px;
       text-align: center;
-      padding: 10px;
+      padding: 14px;
+    }
+
+    .swatch.yellow {
+      background: var(--yellow);
+    }
+
+    .swatch.turquoise {
+      background: var(--turquoise);
+    }
+
+    .swatch.coral {
+      background: #FFDFD4;
     }
 
     .text-link {
-      color: #D94337;
-      font-weight: bold;
+      color: var(--dark-coral);
+      font-weight: 900;
       text-decoration: none;
     }
 
     .callout {
-      border-left: 5px solid var(--terra);
-      padding: 5px 0 5px 20px;
+      border-left: 5px solid var(--green);
+      padding: 8px 0 8px 22px;
       margin: 25px 0;
     }
 
-    .callout:nth-of-type(2) {
-      border-color: var(--sage);
-    }
-
-    .callout:nth-of-type(3) {
-      border-color: #D99A16;
-    }
-
     .callout h3 {
-      margin-top: 0;
+      margin-bottom: 8px;
     }
 
-    .pink-section {
-      background: #FFE3EC;
+    .ingredient-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
     }
 
-    .yellow-section {
-      background: #FFE6B4;
+    .ingredient-list span {
+      display: inline-block;
+      background: var(--white);
+      border: 1px solid var(--turquoise);
+      border-radius: 50px;
+      padding: 7px 13px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .faq-item {
+      padding: 20px 0;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
+    }
+
+    .closing-cta {
+      background: var(--pink);
+      border-radius: 22px;
+      padding: 38px;
+      text-align: center;
+    }
+
+    .closing-cta p {
+      max-width: 650px;
+      margin: 0 auto 18px;
     }
 
     footer {
       background: var(--dark);
-      color: white;
-      padding: 35px 8%;
+      color: var(--white);
+      padding: 40px 8%;
     }
 
     footer nav {
-      margin: 18px 0;
+      margin: 20px 0;
     }
 
     footer nav a {
-      color: white;
+      color: var(--white);
+    }
+
+    footer nav a:hover {
+      color: var(--yellow);
+    }
+
+    footer .logo {
+      color: var(--yellow);
     }
 
     .footer-note {
       color: #F5E7F0;
-      font-size: .8rem;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 800px) {
       header {
         justify-content: center;
         text-align: center;
@@ -260,20 +360,29 @@
 
       nav {
         justify-content: center;
-        gap: 12px;
+        gap: 12px 16px;
       }
 
       .hero {
-        padding: 50px 7%;
+        padding: 58px 7%;
       }
 
       section {
-        padding: 40px 7%;
+        padding: 45px 7%;
       }
 
       .split,
       .cards {
         grid-template-columns: 1fr;
+      }
+
+      .panel,
+      .card {
+        padding: 23px;
+      }
+
+      .closing-cta {
+        padding: 28px 22px;
       }
     }
 
@@ -281,310 +390,282 @@
       *,
       *::before,
       *::after {
+        scroll-behavior: auto !important;
         transition: none !important;
-        scroll-behavior: auto;
       }
     }
   </style>
 </head>
 
 <body>
-
   <div class="notice">
     This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
   </div>
 
   <header>
-    <a class="logo" href="index.html">SUN<span>BLEACH</span></a>
+    <a class="logo" href="index.html">SUNBLEACH</a>
 
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="moisturizer.html">Moisturizer</a>
-      <a href="sunscreen.html">Sunscreen</a>
+      <a href="sunscreen.html" aria-current="page">Sunscreen</a>
       <a href="barrier-repair.html">Skin Barrier Guide</a>
     </nav>
   </header>
 
   <main>
-
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">Your daily desert essential</p>
-
         <h1>Mineral Sunscreen With No White Cast</h1>
-
         <p>
-          Daily sunscreen is a must in a sunny climate, but nobody wants
-          a finish that looks chalky or feels uncomfortable. If you prefer
-          mineral sunscreen, understanding zinc oxide, tint, texture, and
-          application can help you find an option that works for your skin
-          and routine.
+          Daily sunscreen is a must in a sunny climate, but nobody wants a finish
+          that looks chalky or feels uncomfortable. Learn how mineral sunscreen
+          works, why tinted formulas can help, and what to look for when choosing
+          sun protection for desert living.
         </p>
-
-        <a class="button" href="#tips">Find your sunscreen fit</a>
+        <a class="button" href="#tips">Find Your Sunscreen Fit</a>
       </div>
     </section>
 
     <section>
       <div class="split">
-
         <div>
           <p class="eyebrow">First, the basics</p>
-
           <h2>What Is Mineral Sunscreen?</h2>
-
           <p>
-            Mineral sunscreens use zinc oxide, titanium dioxide, or both
-            as active sunscreen ingredients. These ingredients help protect
-            skin from ultraviolet radiation. Broad-spectrum products are
-            designed to protect against both UVA and UVB rays.
+            Mineral sunscreens use zinc oxide, titanium dioxide, or both as
+            active sunscreen ingredients. These ingredients help protect skin
+            from ultraviolet radiation. Broad-spectrum products are designed
+            to protect against both UVA and UVB rays.
           </p>
-
           <p>
             Mineral sunscreen can be a useful choice for people who prefer
-            these active ingredients, but the texture and finish vary by
-            formula. Some products blend in more easily than others.
+            these active ingredients, but texture and finish vary by formula.
+            Some products blend in more easily than others.
           </p>
         </div>
 
         <div class="panel">
+          <p class="eyebrow">Let's talk finish</p>
           <h3>Why Does a White Cast Happen?</h3>
-
           <p>
-            Zinc oxide and titanium dioxide are mineral particles that can
-            leave a pale appearance on skin. The effect depends on the
-            formula, the amount applied, the particle characteristics,
-            and your skin tone.
+            Zinc oxide and titanium dioxide can leave a pale appearance on skin.
+            The effect depends on the formula, the amount applied, and your skin tone.
           </p>
-
           <p>
-            A tinted formula can help reduce the visible contrast. No
-            product can guarantee an invisible finish on every skin tone,
-            so testing the formula in natural light is useful.
+            A tinted formula can help reduce visible contrast. No product can
+            guarantee an invisible finish on every skin tone, so testing a formula
+            in natural light can be helpful.
           </p>
         </div>
-
       </div>
     </section>
 
-    <section class="pink-section" id="tips">
-      <p class="eyebrow">What to look for</p>
-
-      <h2>Three Things to Check Before Buying</h2>
+    <section id="tips" style="background:#FFE6D5">
+      <div class="section-intro">
+        <p class="eyebrow">What to look for</p>
+        <h2>Three Things to Check Before Buying</h2>
+        <p>
+          A good sunscreen should fit your skin, feel comfortable, and provide
+          dependable protection when used as directed.
+        </p>
+      </div>
 
       <div class="cards">
-
         <article class="card">
           <div class="swatch">01 / TINT</div>
-
           <h3>A Tint That Suits Your Skin</h3>
-
           <p>
-            Tinted mineral sunscreen contains pigments that can help the
-            product blend more naturally. Look for a shade that matches
-            your skin tone without needing to apply too little product.
+            Tinted mineral sunscreen contains pigments that can help the product
+            blend more naturally. Look for a shade that suits your skin tone
+            without needing to apply too little product.
           </p>
         </article>
 
         <article class="card">
-          <div class="swatch" style="background:#A8E5D5">
-            02 / TEXTURE
-          </div>
-
+          <div class="swatch turquoise">02 / TEXTURE</div>
           <h3>A Finish You Enjoy</h3>
-
           <p>
-            Fluid and lotion textures may feel lighter, while creams can
-            feel richer. If your skin gets dry in air conditioning, consider
-            how the formula wears over your moisturizer.
+            Fluid and lotion textures may feel lighter, while creams can feel
+            richer. If your skin gets dry in air conditioning, consider how the
+            formula wears over your moisturizer.
           </p>
         </article>
 
         <article class="card">
-          <div class="swatch" style="background:#FFD85A">
-            03 / PROTECTION
-          </div>
-
+          <div class="swatch yellow">03 / PROTECTION</div>
           <h3>Broad-Spectrum SPF 30+</h3>
-
           <p>
-            Choose broad-spectrum sunscreen with SPF 30 or higher. A
-            flattering finish matters, but it should not come at the cost
-            of applying enough sunscreen.
+            Choose broad-spectrum sunscreen with SPF 30 or higher. A flattering
+            finish matters, but it should not come at the cost of applying
+            enough sunscreen.
           </p>
         </article>
-
       </div>
     </section>
 
     <section>
       <div class="split">
-
         <div>
           <p class="eyebrow">The Sunbleach concept</p>
-
           <h2>Daybreak Mineral SPF 30</h2>
-
           <p>
-            Daybreak is Sunbleach's fictional daily mineral sunscreen
-            concept, imagined for adults navigating sunny days in Scottsdale
-            and Phoenix. Its proposed formula uses zinc oxide as its active
-            sunscreen ingredient and includes blue agave extract and
-            squalane as skin-conditioning ingredients.
+            Meet Daybreak, Sunbleach's fictional daily mineral sunscreen concept,
+            imagined for adults navigating sunny days in Scottsdale and Phoenix.
+            Its proposed formula uses zinc oxide as its active sunscreen
+            ingredient, with blue agave extract and squalane as skin-conditioning
+            ingredients.
           </p>
-
           <p>
-            The concept is designed around a comfortable, natural-looking
-            finish. A real formula would need appropriate testing to verify
-            its SPF, broad-spectrum protection, stability, and performance
-            before it could be sold.
+            The concept is designed around a comfortable, natural-looking finish.
+            A real formula would need appropriate testing to verify its SPF,
+            broad-spectrum protection, stability, and performance before it
+            could be sold.
           </p>
-
-          <a class="button" href="index.html#products">
-            Explore the collection
-          </a>
+          <a class="button" href="index.html#products">Explore the Collection</a>
         </div>
 
-        <div class="panel">
+        <div class="panel pink">
           <p class="eyebrow">Formula concept</p>
-
           <h3>Ingredient Breakdown</h3>
+          <p><strong>Zinc oxide:</strong> The proposed active mineral sunscreen ingredient.</p>
+          <p><strong>Blue agave extract:</strong> A desert-inspired botanical included for its skin-conditioning appeal.</p>
+          <p><strong>Squalane:</strong> An emollient that helps soften skin.</p>
+          <p><strong>Tint:</strong> The proposed tinted version is intended to reduce the appearance of a white cast.</p>
 
-          <p>
-            <strong>Zinc oxide:</strong> the proposed active mineral
-            sunscreen ingredient.
-          </p>
+          <div class="ingredient-list">
+            <span>Zinc Oxide</span>
+            <span>Blue Agave</span>
+            <span>Squalane</span>
+            <span>Tinted Finish</span>
+          </div>
 
-          <p>
-            <strong>Blue agave extract:</strong> a desert-inspired botanical
-            included for its skin-conditioning appeal.
-          </p>
-
-          <p>
-            <strong>Squalane:</strong> an emollient that helps soften skin.
-          </p>
-
-          <p>
-            <strong>Tint:</strong> the proposed tinted version is intended
-            to reduce the appearance of a white cast.
-          </p>
-
-          <p>
-            <em>
-              Sunbleach is fictional. This concept has not been tested
-              and does not represent a verified SPF product.
-            </em>
-          </p>
+          <p><em>Sunbleach is fictional. This concept has not been tested and does not represent a verified SPF product.</em></p>
         </div>
-
       </div>
     </section>
 
-    <section class="yellow-section">
-      <p class="eyebrow">Application matters</p>
-
-      <h2>How to Wear Mineral Sunscreen Comfortably</h2>
+    <section style="background:#D5F2E9">
+      <div class="section-intro">
+        <p class="eyebrow">Application matters</p>
+        <h2>How to Wear Mineral Sunscreen Comfortably</h2>
+        <p>
+          Even a great formula needs to be applied correctly. Make these steps
+          part of your everyday routine.
+        </p>
+      </div>
 
       <div class="callout">
         <h3>1. Start With Moisturized Skin</h3>
-
         <p>
-          Apply your usual moisturizer and let it settle. This can help
-          sunscreen spread more evenly over dry areas.
+          Apply your usual moisturizer and let it settle. This can help sunscreen
+          spread more evenly over dry areas.
         </p>
       </div>
 
       <div class="callout">
         <h3>2. Apply Enough Product</h3>
-
         <p>
-          Use the amount directed on the product label. Applying too little
-          can reduce the protection you receive compared with the labeled SPF.
+          Use the amount directed on the product label. Applying too little can
+          reduce the protection you receive compared with the labeled SPF.
         </p>
       </div>
 
       <div class="callout">
         <h3>3. Blend in Sections</h3>
-
         <p>
           Spread sunscreen over one area at a time, including your forehead,
-          cheeks, nose, jaw, ears, and neck. Avoid leaving gaps near your
-          hairline.
+          cheeks, nose, jaw, ears, and neck. Avoid leaving gaps near your hairline.
         </p>
       </div>
 
       <div class="callout">
         <h3>4. Reapply Throughout the Day</h3>
-
         <p>
-          Reapply at least every two hours outdoors and after swimming or
-          sweating, following the label. Seek shade and use protective
-          clothing, especially around midday.
+          Reapply at least every two hours outdoors and after swimming or sweating,
+          following the label. Seek shade and use protective clothing, especially
+          around midday.
         </p>
       </div>
     </section>
 
     <section>
-      <p class="eyebrow">Frequently asked questions</p>
+      <div class="section-intro">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>Mineral Sunscreen, Made Simpler</h2>
+      </div>
 
-      <h2>Mineral Sunscreen, Made Simpler</h2>
+      <div class="faq-item">
+        <h3>Is mineral sunscreen always better for sensitive skin?</h3>
+        <p>
+          Not always. Individual skin responses vary, and a formula's full
+          ingredient list matters. If you have sensitive skin, introduce products
+          carefully and discontinue use if irritation develops.
+        </p>
+      </div>
 
-      <h3>Is mineral sunscreen always better for sensitive skin?</h3>
+      <div class="faq-item">
+        <h3>Does tinted sunscreen provide enough protection?</h3>
+        <p>
+          A tinted sunscreen can provide sun protection if it is properly
+          formulated, tested, and labeled. Apply it according to its directions
+          and do not rely on tint alone as sun protection.
+        </p>
+      </div>
 
-      <p>
-        Not always. Individual skin responses vary, and a formula's full
-        ingredient list matters. If you have sensitive skin, introduce
-        products carefully and discontinue use if irritation develops.
-      </p>
+      <div class="faq-item">
+        <h3>Can I wear makeup over mineral sunscreen?</h3>
+        <p>
+          Yes. Let sunscreen settle before applying makeup, and avoid rubbing
+          so much that you disturb the protective layer. Reapply sunscreen as
+          directed throughout the day.
+        </p>
+      </div>
 
-      <h3>Does tinted sunscreen provide enough protection?</h3>
-
-      <p>
-        A tinted sunscreen can provide sun protection if it is properly
-        formulated, tested, and labeled. Apply it according to its
-        directions and do not rely on tint alone as sun protection.
-      </p>
-
-      <h3>Can I wear makeup over mineral sunscreen?</h3>
-
-      <p>
-        Yes. Let sunscreen settle before applying makeup, and avoid rubbing
-        so much that you disturb the protective layer. Reapply sunscreen
-        as directed throughout the day.
-      </p>
-
-      <h3>Can I use sunscreen only when it is very sunny?</h3>
-
-      <p>
-        UV exposure can occur on cloudy days, too. Make broad-spectrum sun
-        protection part of your daily routine when the UV index indicates
-        a need for protection, and follow local sun-safety guidance.
-      </p>
+      <div class="faq-item">
+        <h3>Can I use sunscreen only when it is very sunny?</h3>
+        <p>
+          UV exposure can occur on cloudy days, too. Make broad-spectrum sun
+          protection part of your daily routine when the UV index indicates a
+          need for protection, and follow local sun-safety guidance.
+        </p>
+      </div>
     </section>
 
+    <section>
+      <div class="closing-cta">
+        <p class="eyebrow">Your desert routine, simplified</p>
+        <h2>Hydrate. Protect. Glow.</h2>
+        <p>
+          Explore the Sunbleach collection concept and discover how hydration,
+          barrier care, and daily sun protection fit together.
+        </p>
+        <a class="button" href="index.html#products">Explore Sunbleach</a>
+        <a class="button secondary" href="barrier-repair.html">Read the Skin Barrier Guide</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <a class="logo" href="index.html" style="color:#FFD85A">SUNBLEACH</a>
+    <a class="logo" href="index.html">SUNBLEACH</a>
 
     <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="moisturizer.html">Moisturizer</a>
-      <a href="sunscreen.html">Sunscreen</a>
+      <a href="sunscreen.html" aria-current="page">Sunscreen</a>
       <a href="barrier-repair.html">Skin Barrier Guide</a>
     </nav>
 
     <p class="footer-note">
-      This is a fictional website created for educational purposes as part
-      of MKTG:4400 at the University of Iowa. It is not a real business.
+      This is a fictional website created for educational purposes as part of
+      MKTG:4400 at the University of Iowa. It is not a real business.
     </p>
 
     <p class="footer-note">
-      Sunbleach and Daybreak Mineral SPF 30 are fictional concepts.
-      No SPF performance or product testing is claimed.
+      Sunbleach and Daybreak Mineral SPF 30 are fictional concepts. No SPF
+      performance or product testing is claimed.
     </p>
   </footer>
-
 </body>
 </html>
-
