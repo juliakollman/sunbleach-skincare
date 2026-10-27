@@ -1,204 +1,601 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about mineral sunscreen, white cast, application tips, and a fictional Sunbleach daily SPF concept.">
-  <title>Mineral Sunscreen With No White Cast | Sunbleach</title>
+  <title>The Sun Buddy | Sunbleach Skincare</title>
+  <meta name="description" content="Learn about mineral sunscreen, white cast, and how to make daily sun protection part of your routine.">
   <style>
     :root {
-      --cream: #fff8ed;
-      --sand: #f2dfc4;
-      --orange: #f47745;
-      --pink: #efaaa1;
-      --red: #a94332;
-      --green: #526b4d;
-      --dark: #302b25;
-      --white: #ffffff;
+      --coral: #FF684A;
+      --pink: #FFB7C5;
+      --yellow: #FFD85A;
+      --turquoise: #76D9C3;
+      --vanilla: #FFF8EF;
+      --ink: #252321;
+      --white: #FFFFFF;
+      --radius: 24px;
+      --shadow: 5px 5px 0 var(--ink);
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.7; }
+
+    body {
+      margin: 0;
+      background: var(--vanilla);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
     a { color: inherit; }
-    .notice { padding: 12px 20px; background: var(--dark); color: var(--white); text-align: center; font-size: 12px; line-height: 1.5; }
-    header { padding: 20px 7%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid var(--sand); }
-    .logo { color: var(--red); font-size: 30px; font-weight: 900; letter-spacing: 5px; text-decoration: none; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { font-size: 13px; font-weight: bold; text-decoration: none; }
-    nav a:hover { color: var(--red); }
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.15; }
-    h1 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -2px; margin: 15px 0 20px; }
-    h2 { font-size: clamp(30px, 4vw, 45px); margin-top: 0; }
-    h3 { font-size: 25px; margin-top: 0; }
-    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 800; }
-    .hero { padding: 70px 7%; background: #cbd4b8; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 45px; }
-    .hero p { max-width: 570px; }
-    .hero-art { min-height: 330px; background: var(--orange); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .sun { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: #ffdc7b; top: 25px; }
-    .hill { position: absolute; height: 130px; width: 130%; border-radius: 50% 50% 0 0; bottom: -70px; background: var(--red); transform: rotate(-10deg); }
-    .hill.two { bottom: -105px; background: var(--green); transform: rotate(10deg); }
-    .spf { z-index: 3; width: 105px; height: 160px; background: #edf0df; border: 2px solid rgba(48,43,37,.25); border-radius: 14px 14px 22px 22px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 10px; font-size: 12px; letter-spacing: 1px; font-weight: bold; box-shadow: 8px 10px 0 rgba(48,43,37,.1); }
-    section { padding: 65px 7%; }
-    .intro { max-width: 750px; margin-bottom: 30px; }
-    .intro p { color: #665d52; }
-    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    .card { background: var(--white); border: 1px solid var(--sand); padding: 28px; }
-    .card p:last-child { margin-bottom: 0; }
-    .card ul { padding-left: 20px; }
-    .dark-section { background: var(--green); color: var(--white); }
-    .dark-section .intro p { color: #f2eadc; }
-    .dark-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .dark-card { background: rgba(255,255,255,.1); padding: 23px; border-top: 3px solid var(--pink); }
-    .dark-card p { font-size: 14px; }
-    .dark-card h3 { margin-bottom: 10px; }
-    .application { background: var(--sand); }
-    .steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
-    .step { padding: 23px; background: var(--cream); }
-    .step-number { color: var(--red); font-size: 12px; letter-spacing: 2px; font-weight: 900; }
-    .tip { background: #f9e5d9; padding: 28px; margin-top: 24px; border-left: 5px solid var(--orange); }
-    .button { display: inline-block; background: var(--dark); color: var(--white); padding: 13px 23px; margin-top: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: bold; border-radius: 3px; }
-    .button:hover { background: var(--red); }
-    footer { background: var(--dark); color: var(--white); padding: 40px 7% 0; }
-    .footer-main { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; padding-bottom: 30px; }
-    footer .logo { color: var(--pink); }
-    footer nav a { color: var(--white); }
-    footer .notice { margin: 0 -8.14%; background: #211e1a; padding: 15px 20px; }
-    @media(max-width:760px) {
-      header { padding: 18px 5%; }
-      nav { gap: 12px; }
-      .hero { grid-template-columns: 1fr; padding: 48px 6%; }
-      section { padding: 48px 6%; }
-      .content-grid, .dark-grid, .steps { grid-template-columns: 1fr; }
-      .hero-art { min-height: 270px; }
+
+    .notice {
+      padding: 10px 18px;
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .site-header {
+      padding: 20px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .logo {
+      text-decoration: none;
+      font-weight: 1000;
+      font-size: 1.7rem;
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+
+    .logo span { color: var(--coral); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 8px 13px;
+      border: 1.5px solid transparent;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background: var(--yellow);
+      border-color: var(--ink);
+    }
+
+    .hero {
+      width: 90%;
+      max-width: 1400px;
+      margin: 28px auto 0;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      overflow: hidden;
+      border: 2px solid var(--ink);
+      border-radius: 32px;
+      background: var(--coral);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: clamp(30px, 6vw, 76px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1.5px solid var(--ink);
+      border-radius: 30px;
+      background: var(--yellow);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(3.4rem, 7vw, 7rem);
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--vanilla);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: -3px;
+    }
+
+    .hero-copy p {
+      max-width: 520px;
+      margin: 0 0 25px;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 2px solid var(--ink);
+      border-radius: 40px;
+      background: var(--yellow);
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .hero-art {
+      min-height: 390px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--turquoise);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sun-disc {
+      width: min(75%, 310px);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 8px 8px 0 var(--ink);
+      font-size: clamp(5rem, 11vw, 8rem);
+    }
+
+    .sticker {
+      position: absolute;
+      right: 7%;
+      bottom: 14%;
+      padding: 11px 14px;
+      border: 2px solid var(--ink);
+      border-radius: 30px;
+      background: var(--pink);
+      font-size: 0.8rem;
+      font-weight: 1000;
+      transform: rotate(-8deg);
+    }
+
+    .section {
+      width: 88%;
+      max-width: 1100px;
+      margin: 82px auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .mini-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      font-weight: 1000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .section-heading p { max-width: 680px; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 24px;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .feature-card:nth-child(1) { background: var(--yellow); }
+    .feature-card:nth-child(2) { background: var(--pink); }
+    .feature-card:nth-child(3) { background: var(--turquoise); }
+
+    .feature-card .emoji {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+      letter-spacing: -0.8px;
+    }
+
+    .feature-card p { margin-bottom: 0; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .content-panel {
+      padding: clamp(25px, 4vw, 42px);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--pink);
+    }
+
+    .content-panel.yellow { background: var(--yellow); }
+    .content-panel.turquoise { background: var(--turquoise); }
+
+    .content-panel h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+
+    .content-panel ul,
+    .content-panel ol { padding-left: 22px; }
+
+    .content-panel li { margin-bottom: 10px; }
+
+    .callout {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 6px solid var(--coral);
+      border-radius: 0 14px 14px 0;
+      background: var(--white);
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      display: flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      font-weight: 1000;
+    }
+
+    .faq {
+      padding: 22px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .faq h3 {
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+      letter-spacing: -0.5px;
+    }
+
+    .faq p { margin-bottom: 0; }
+
+    footer {
+      margin-top: 90px;
+      padding: 38px 6% 24px;
+      border-top: 2px solid var(--ink);
+      background: var(--pink);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-top p { max-width: 450px; }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      font-weight: 800;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .footer-notice {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1.5px solid var(--ink);
+      font-size: 0.76rem;
+    }
+
+    @media (max-width: 850px) {
+      .site-header { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { min-height: 300px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .site-header { padding: 18px 5%; }
+      nav a { padding: 7px 10px; font-size: 0.8rem; }
+      .hero { width: 92%; border-radius: 22px; }
+      .hero-copy { padding: 30px 22px; }
+      h1 { font-size: clamp(3.1rem, 15vw, 4.8rem); }
+      .section { width: 90%; margin: 62px auto; }
     }
   </style>
 </head>
 <body>
-  <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+  <div class="notice">
+    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+  </div>
 
-  <header>
-    <a class="logo" href="index.html">SUNBLEACH</a>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Sunbleach home">sunbleach<span>®</span></a>
     <nav aria-label="Main navigation">
-      <a href="index.html">HOME</a>
-      <a href="moisturizer.html">MOISTURIZER</a>
-      <a href="sunscreen.html">SUNSCREEN</a>
-      <a href="barrier.html">SKIN BARRIER</a>
+      <a href="index.html">Home</a>
+      <a href="moisturizer.html">Moisturizer</a>
+      <a href="sunscreen.html" aria-current="page">Sunscreen</a>
+      <a href="barrier.html">Skin Barrier</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div>
-        <div class="eyebrow">The desert skin journal · Sun smart</div>
-        <h1>Mineral sunscreen, minus the fuss.</h1>
-        <p>Looking for mineral sunscreen with no white cast? You're not alone. Mineral formulas can leave a pale or chalky finish, especially when they're not blended well or the amount applied is too thin.</p>
-        <p>Learn what causes white cast, what to look for in a sunscreen, and how to protect your skin through bright Arizona days.</p>
-        <a class="button" href="#application">Learn how to apply</a>
+      <div class="hero-copy">
+        <span class="eyebrow">SPF is the everyday essential</span>
+        <h1>Sun's out.<br><span>SPF on.</span></h1>
+        <p>
+          Sunshine is part of the desert's personality. Daily sun protection
+          belongs in your routine, too. Let's talk mineral sunscreen, white
+          cast, and finding a formula you actually want to wear.
+        </p>
+        <a class="button" href="#spf-basics">Get the SPF basics ↗</a>
       </div>
-      <div class="hero-art" role="img" aria-label="Illustration of a mineral sunscreen bottle in front of an Arizona sunset">
-        <div class="sun"></div>
-        <div class="hill"></div>
-        <div class="hill two"></div>
-        <div class="spf">SUNBLEACH<br>EVERYDAY<br>MINERAL SPF</div>
+
+      <div class="hero-art" aria-label="Decorative sun illustration">
+        <div class="sun-disc" aria-hidden="true">☀</div>
+        <span class="sticker">SPF EVERY DAY!</span>
       </div>
     </section>
 
-    <section>
-      <div class="intro">
-        <div class="eyebrow">Know your SPF</div>
-        <h2>What makes mineral sunscreen different?</h2>
-        <p>Mineral sunscreens use zinc oxide, titanium dioxide, or both as active UV filters. They help protect skin by absorbing and scattering ultraviolet radiation. The best sunscreen is one you enjoy wearing and will apply consistently.</p>
+    <section class="section" id="spf-basics">
+      <div class="section-heading">
+        <span class="mini-label">The sunscreen download</span>
+        <h2>Protection is always in.</h2>
+        <p>
+          Sunscreen is one important part of protecting your skin from
+          ultraviolet (UV) radiation. Look for broad-spectrum protection and
+          SPF 30 or higher, and follow the product's directions.
+        </p>
       </div>
-      <div class="content-grid">
-        <article class="card">
-          <h3>Why does white cast happen?</h3>
-          <p>Zinc oxide and titanium dioxide are mineral particles that can appear white on skin. The visible effect depends on the formula, particle properties, amount applied, and your skin tone.</p>
-          <p>Some tinted formulas use iron oxides to reduce the visible pale finish. Tinted products may also offer some protection against visible light, depending on the formula and testing.</p>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">🛡️</span>
+          <h3>Broad-spectrum matters</h3>
+          <p>
+            Broad-spectrum sunscreen protects against both UVA and UVB rays.
+            SPF mainly describes protection against sunburn-causing UVB rays.
+          </p>
         </article>
-        <article class="card">
-          <h3>What to look for</h3>
-          <ul>
-            <li><strong>Broad-spectrum protection:</strong> choose SPF 30 or higher for everyday use.</li>
-            <li><strong>A suitable finish:</strong> look for clear, sheer, or tinted formulas that suit your preferences and skin tone.</li>
-            <li><strong>Comfort:</strong> choose a texture you can apply generously without wanting to skip it.</li>
-            <li><strong>Water resistance:</strong> if swimming or sweating, choose a water-resistant formula and follow its reapplication directions.</li>
-          </ul>
+
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">🪨</span>
+          <h3>Meet mineral filters</h3>
+          <p>
+            Mineral sunscreens use zinc oxide, titanium dioxide, or both as
+            active ingredients to help protect skin from UV radiation.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="emoji" aria-hidden="true">🔁</span>
+          <h3>Reapply, please</h3>
+          <p>
+            Apply generously and reapply at least every two hours outdoors,
+            and after swimming, sweating, or towel drying, as directed.
+          </p>
         </article>
       </div>
     </section>
 
-    <section class="dark-section">
-      <div class="intro">
-        <div class="eyebrow">Our fictional SPF concept</div>
-        <h2>Meet The Everyday SPF.</h2>
-        <p>Sunbleach imagines a daily mineral sunscreen designed for Arizona routines, with a comfortable finish and simple, easy-to-understand product information.</p>
+    <section class="section split">
+      <article class="content-panel yellow">
+        <span class="mini-label">The white-cast question</span>
+        <h2>Why does mineral SPF look white?</h2>
+        <p>
+          Some mineral sunscreen formulas can leave a pale or ashy-looking
+          film, especially on deeper skin tones. The finish depends on the
+          formula, the amount applied, and your skin tone.
+        </p>
+        <ul>
+          <li>Look for products that specifically describe their finish.</li>
+          <li>If you prefer tint, explore tinted sunscreen options made for your skin tone.</li>
+          <li>Test a product on your face or jawline when possible.</li>
+          <li>Choose a sunscreen you can apply generously and wear consistently.</li>
+        </ul>
+        <div class="callout">
+          <strong>Real talk:</strong> A product's marketing description does
+          not guarantee that it will leave no white cast on every skin tone.
+        </div>
+      </article>
+
+      <article class="content-panel turquoise">
+        <span class="mini-label">Meet the concept</span>
+        <h2>The Sun Buddy.</h2>
+        <p>
+          The Sun Buddy is Sunbleach's fictional daily mineral sunscreen
+          concept. Inspired by bright Arizona days, it is imagined as an
+          everyday essential that fits into a simple morning routine.
+        </p>
+        <p>
+          A real sunscreen must be properly formulated and tested to meet
+          applicable requirements. This concept is not a real product and
+          has no verified SPF, ingredients, or tested performance.
+        </p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="mini-label">Your daily SPF ritual</span>
+        <h2>Make it a habit, not a maybe.</h2>
       </div>
-      <div class="dark-grid">
-        <article class="dark-card">
-          <h3>Mineral filters</h3>
-          <p>The concept is built around zinc oxide as its mineral UV filter. Any real formula would need appropriate testing to substantiate its stated SPF and broad-spectrum claims.</p>
-        </article>
-        <article class="dark-card">
-          <h3>Desert-inspired care</h3>
-          <p>Jojoba oil and prickly pear inspire the brand's skin-conditioning story, while blue agave connects the concept to the desert landscape.</p>
-        </article>
-        <article class="dark-card">
-          <h3>A finish that feels good</h3>
-          <p>The design goal is a comfortable, blendable finish. No white-cast or protection claim is guaranteed without a finished formula and proper testing.</p>
-        </article>
+
+      <article class="content-panel">
+        <ol class="steps">
+          <li>
+            <div>
+              <strong>Start with your morning skin care.</strong>
+              <p>Cleanse and moisturize as needed before applying sunscreen.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Apply enough.</strong>
+              <p>Follow the label directions and apply sunscreen generously to exposed skin.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Don't forget easy-to-miss spots.</strong>
+              <p>Pay attention to your ears, neck, hairline, and the backs of your hands.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Bring it with you.</strong>
+              <p>Reapply as directed and add shade, protective clothing, and a hat when possible.</p>
+            </div>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="mini-label">Frequently asked questions</span>
+        <h2>SPF, decoded.</h2>
       </div>
-      <div class="tip">
-        <strong>Important:</strong> Sunbleach is a fictional class project. This sunscreen is a concept, not a real or tested SPF product. Use a commercially available sunscreen with verified labeling for actual sun protection.
+
+      <div class="faq">
+        <h3>Is mineral sunscreen always better for sensitive skin?</h3>
+        <p>
+          Not always. Some people prefer mineral formulas, but individual
+          reactions depend on the full formula and your skin. If you have
+          sensitive skin, consider fragrance-free options and patch-test new
+          products when appropriate.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>Can I skip sunscreen on cloudy days?</h3>
+        <p>
+          No. UV rays can reach your skin even when it is cloudy. Make sun
+          protection part of your routine whenever you are exposed to daylight.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>Does makeup with SPF replace sunscreen?</h3>
+        <p>
+          Makeup with SPF can add protection, but many people apply too little
+          makeup to get the labeled level of protection. Use a dedicated
+          sunscreen as directed, then apply makeup if you want.
+        </p>
       </div>
     </section>
 
-    <section id="application" class="application">
-      <div class="intro">
-        <div class="eyebrow">Make every application count</div>
-        <h2>How to wear mineral SPF.</h2>
-        <p>Application matters as much as formula. Using too little sunscreen can reduce the protection you receive.</p>
-      </div>
-      <div class="steps">
-        <article class="step">
-          <div class="step-number">STEP 01</div>
-          <h3>Start with skincare</h3>
-          <p>Apply your moisturizer first and let it settle. If you use makeup, sunscreen should go on before makeup.</p>
-        </article>
-        <article class="step">
-          <div class="step-number">STEP 02</div>
-          <h3>Apply generously</h3>
-          <p>Follow the label for the amount to use. Spread sunscreen evenly across exposed skin, including your ears, neck, and other commonly missed areas.</p>
-        </article>
-        <article class="step">
-          <div class="step-number">STEP 03</div>
-          <h3>Reapply regularly</h3>
-          <p>Reapply at least every two hours outdoors and after swimming or sweating, following the product's directions. Use shade, clothing, and a hat for extra protection.</p>
-        </article>
-      </div>
-      <div class="tip">
-        <h3>Remember: cloudy days count, too.</h3>
-        <p>Ultraviolet radiation can reach your skin even when the sky is overcast. Make sun protection part of your routine whenever you're spending time outside.</p>
-        <a class="button" href="moisturizer.html">Complete your routine</a>
+    <section class="section">
+      <div class="content-panel">
+        <span class="mini-label">Keep the routine balanced</span>
+        <h2>Sun protection + skin comfort.</h2>
+        <p>
+          Sun care is one part of the bigger picture. If dry weather leaves
+          your skin feeling tight or irritated, a simple, gentle routine can
+          help support your skin barrier.
+        </p>
+        <a class="button" href="barrier.html">Read the skin barrier guide ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-main">
+    <div class="footer-top">
       <div>
-        <a class="logo" href="index.html">SUNBLEACH</a>
-        <p>Desert-inspired skincare.<br>Made for sunny days and everyday skin.</p>
-        <p>Scottsdale, Arizona · A fictional brand</p>
+        <a class="logo" href="index.html">sunbleach<span>®</span></a>
+        <p>Desert-inspired skincare ideas for sunny days, dry air, and everyday routines.</p>
       </div>
-      <nav aria-label="Footer navigation">
-        <a href="index.html">HOME</a>
-        <a href="moisturizer.html">MOISTURIZER</a>
-        <a href="sunscreen.html">SUNSCREEN</a>
-        <a href="barrier.html">SKIN BARRIER</a>
-      </nav>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="moisturizer.html">Moisturizer</a>
+        <a href="sunscreen.html">Sunscreen</a>
+        <a href="barrier.html">Skin Barrier</a>
+      </div>
     </div>
-    <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
+    <div class="footer-notice">
+      This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
   </footer>
 </body>
 </html>
