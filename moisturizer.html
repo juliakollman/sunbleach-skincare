@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Looking for a moisturizer for dry skin in summer? Learn how to hydrate skin in desert heat with lightweight moisture and barrier-supporting ingredients.">
+  <meta name="description" content="Learn how to hydrate skin in desert heat with lightweight moisture and barrier-supporting ingredients.">
   <title>Moisturizer for Dry Skin in Summer | Sunbleach</title>
-
   <style>
     :root {
       --cream: #FFF8EF;
@@ -20,13 +19,8 @@
       --turquoise: #76D9C3;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -35,13 +29,11 @@
       font: 16px/1.75 "Trebuchet MS", Arial, sans-serif;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     .notice {
       background: var(--dark);
-      color: white;
+      color: var(--white);
       text-align: center;
       padding: 10px 16px;
       font-size: .78rem;
@@ -65,9 +57,7 @@
       text-decoration: none;
     }
 
-    .logo span {
-      color: var(--terra);
-    }
+    .logo span { color: var(--terra); }
 
     nav {
       display: flex;
@@ -82,23 +72,17 @@
     }
 
     nav a:hover,
-    .text-link:hover {
-      color: var(--terra);
+    footer nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     .hero {
-      background: linear-gradient(
-        120deg,
-        #FFB7C5,
-        #FFCA92 52%,
-        #FFD85A
-      );
+      background: linear-gradient(120deg, #FFB7C5, #FFCA92 52%, #FFD85A);
       padding: 75px 8%;
     }
 
-    .hero-content {
-      max-width: 800px;
-    }
+    .hero-content { max-width: 800px; }
 
     .eyebrow {
       color: #C83D35;
@@ -121,36 +105,32 @@
       margin: 12px 0 20px;
     }
 
-    h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-    }
+    h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 
     h3 {
       font-size: 1.4rem;
       margin-bottom: 10px;
     }
 
-    section {
-      padding: 55px 8%;
-    }
+    p { margin-top: 0; }
+
+    section { padding: 55px 8%; }
 
     .button {
       display: inline-block;
       background: var(--terra);
-      color: white;
+      color: var(--white);
       text-decoration: none;
       padding: 12px 20px;
       margin-top: 8px;
       border: 2px solid var(--terra);
       border-radius: 50px;
       font-weight: bold;
-      transition: transform .2s ease, background .2s ease;
     }
 
     .button:hover {
       background: #D94337;
       border-color: #D94337;
-      transform: translateY(-2px);
     }
 
     .split {
@@ -168,7 +148,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
@@ -177,13 +157,7 @@
       padding: 22px;
       border: 2px solid #F2D7CE;
       border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(53, 33, 58, .06);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(53, 33, 58, .10);
+      box-shadow: 0 6px 16px rgba(53, 33, 58, .05);
     }
 
     .swatch {
@@ -194,16 +168,11 @@
       align-items: center;
       justify-content: center;
       background: #FFE0B9;
-      font: 900 1rem "Arial Black", "Trebuchet MS", sans-serif;
+      font-family: "Arial Black", "Trebuchet MS", sans-serif;
+      font-size: 1rem;
       letter-spacing: 1px;
       text-align: center;
-      padding: 10px;
-    }
-
-    .text-link {
-      color: #D94337;
-      font-weight: bold;
-      text-decoration: none;
+      padding: 12px;
     }
 
     .callout {
@@ -212,39 +181,54 @@
       margin: 25px 0;
     }
 
-    .callout:nth-of-type(2) {
-      border-color: #238F7B;
+    .pink-section { background: #FFE3EC; }
+    .yellow-section { background: #FFE6B4; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
     }
 
-    .callout:nth-of-type(3) {
-      border-color: #D99A16;
+    .steps li {
+      counter-increment: step;
+      margin: 0 0 18px;
+      padding: 18px 20px 18px 65px;
+      background: var(--white);
+      border: 2px solid #F2D7CE;
+      border-radius: 16px;
+      position: relative;
     }
 
-    .callout h3 {
-      margin-top: 0;
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 17px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      font-weight: 900;
     }
 
-    .pink-section {
-      background: #FFE3EC;
+    .faq-item {
+      border-bottom: 2px solid #F2D7CE;
+      padding: 18px 0;
     }
 
-    .yellow-section {
-      background: #FFE6B4;
-    }
+    .faq-item h3 { margin-top: 0; }
 
     footer {
       background: var(--dark);
-      color: white;
+      color: var(--white);
       padding: 35px 8%;
     }
 
-    footer nav {
-      margin: 18px 0;
-    }
-
-    footer nav a {
-      color: white;
-    }
+    footer nav { margin: 18px 0; }
+    footer nav a { color: var(--white); }
 
     .footer-note {
       color: #F5E7F0;
@@ -262,13 +246,8 @@
         gap: 12px;
       }
 
-      .hero {
-        padding: 50px 7%;
-      }
-
-      section {
-        padding: 40px 7%;
-      }
+      .hero { padding: 50px 7%; }
+      section { padding: 40px 7%; }
 
       .split,
       .cards {
@@ -277,79 +256,48 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="notice">
     This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
   </div>
 
   <header>
     <a class="logo" href="index.html">SUN<span>BLEACH</span></a>
-
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="moisturizer.html">Moisturizer</a>
+      <a href="moisturizer.html" aria-current="page">Moisturizer</a>
       <a href="sunscreen.html">Sunscreen</a>
-      <a href="barrier-repair.html">Skin Barrier Guide</a>
+      <a href="barrier-repair.html">Barrier Repair</a>
     </nav>
   </header>
 
   <main>
-
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">The desert hydration guide</p>
-
         <h1>Moisturizer for Dry Skin in Summer</h1>
-
-        <p>
-          Hot weather does not always mean hydrated skin. Dry air, strong
-          sunlight, sweat, and constant air conditioning can leave your face
-          feeling tight even when temperatures are high. The right summer
-          moisturizer helps keep skin comfortable without making your routine
-          feel heavy.
-        </p>
-
+        <p>Hot weather does not always mean hydrated skin. Dry air, strong sunlight, sweat, and constant air conditioning can leave your face feeling tight even when temperatures are high. The right summer moisturizer helps keep skin comfortable without making your routine feel heavy.</p>
         <a class="button" href="#routine">Build a summer routine</a>
       </div>
     </section>
 
     <section>
       <div class="split">
-
         <div>
           <p class="eyebrow">Why summer skin gets dry</p>
-
           <h2>Heat outside. Dry air inside.</h2>
-
-          <p>
-            Living in a desert climate can mean moving between hot outdoor
-            air and cool, air-conditioned spaces throughout the day. Low
-            humidity can contribute to moisture loss, while frequent washing
-            and strong skincare products can make dryness feel worse.
-          </p>
-
-          <p>
-            Skin can be oily and dehydrated at the same time. Oil describes
-            the amount of sebum your skin produces; hydration refers to its
-            water content. A moisturizer can help support both comfort and
-            a healthier-looking skin surface.
-          </p>
+          <p>Living in a desert climate can mean moving between hot outdoor air and cool, air-conditioned spaces throughout the day. Low humidity can contribute to moisture loss, while frequent washing and strong skincare products can make dryness feel worse.</p>
+          <p>Skin can be oily and dehydrated at the same time. Oil describes the amount of sebum your skin produces; hydration refers to its water content. A moisturizer can help support comfort and a healthier-looking skin surface.</p>
         </div>
 
         <div class="panel">
+          <p class="eyebrow">Know your skin</p>
           <h3>Signs your skin may need more moisture</h3>
-
           <ul>
             <li>Your face feels tight after cleansing.</li>
             <li>Dry patches show up around your nose or cheeks.</li>
@@ -357,222 +305,123 @@
             <li>Your skin feels uncomfortable after spending time in air conditioning.</li>
           </ul>
         </div>
-
       </div>
     </section>
 
     <section class="pink-section">
       <p class="eyebrow">What to look for</p>
-
       <h2>Ingredients that make a difference</h2>
 
       <div class="cards">
-
         <article class="card">
-          <div class="swatch">01 / HYDRATE</div>
-
+          <div class="swatch" style="background:#FFE0B9;">01 · HYDRATE</div>
           <h3>Humectants</h3>
-
-          <p>
-            Glycerin and hyaluronic acid attract water to the outer layers
-            of the skin. They can help skin feel more hydrated, especially
-            when paired with ingredients that reduce moisture loss.
-          </p>
+          <p>Glycerin and hyaluronic acid attract water to the outer layers of the skin. They can help skin feel more hydrated, especially when paired with ingredients that reduce moisture loss.</p>
         </article>
 
         <article class="card">
-          <div class="swatch" style="background:#A8E5D5">
-            02 / SOFTEN
-          </div>
-
+          <div class="swatch" style="background:#76D9C3;">02 · SOFTEN</div>
           <h3>Emollients</h3>
-
-          <p>
-            Jojoba oil and squalane help soften the skin's surface and
-            improve its feel. A formula with emollients can make rough,
-            dry areas feel smoother.
-          </p>
+          <p>Jojoba oil and squalane help soften the skin's surface and improve its feel. A formula with emollients can make rough, dry areas feel smoother.</p>
         </article>
 
         <article class="card">
-          <div class="swatch" style="background:#FFB7C5">
-            03 / SUPPORT
-          </div>
-
+          <div class="swatch" style="background:#FFB7C5;">03 · SUPPORT</div>
           <h3>Barrier ingredients</h3>
-
-          <p>
-            Ceramides help support the skin barrier, which helps keep
-            moisture in and external irritants out. They are especially
-            useful to consider when skin feels dry or easily irritated.
-          </p>
+          <p>Ceramides help support the skin barrier, which helps keep moisture in and external irritants out. They are worth considering when skin feels dry or easily irritated.</p>
         </article>
-
       </div>
     </section>
 
     <section>
       <div class="split">
-
         <div>
           <p class="eyebrow">Meet your daily moisturizer</p>
-
           <h2>Desert Dew Barrier Cream</h2>
-
-          <p>
-            Imagined for long summer days in Scottsdale, Desert Dew is
-            Sunbleach's fictional daily moisturizer. Its proposed formula
-            combines prickly pear extract, jojoba oil, glycerin, and
-            ceramides for a comfortable, hydrated finish.
-          </p>
-
-          <p>
-            The goal is simple: provide lasting comfort without requiring
-            a complicated, multi-step routine. Use it after cleansing,
-            while your skin is slightly damp.
-          </p>
-
-          <a class="button" href="index.html#products">
-            Explore all three products
-          </a>
+          <p>Imagined for long summer days in Scottsdale, Desert Dew is Sunbleach's fictional daily moisturizer. Its proposed formula combines prickly pear extract, jojoba oil, glycerin, and ceramides for a comfortable, hydrated finish.</p>
+          <p>The goal is simple: provide lasting comfort without requiring a complicated, multi-step routine. Use it after cleansing, following the product directions.</p>
+          <a class="button" href="index.html#products">Explore all three products</a>
         </div>
 
         <div class="panel">
           <p class="eyebrow">The formula at a glance</p>
-
           <h3>What's inside?</h3>
-
-          <p>
-            <strong>Prickly pear extract:</strong> a desert-inspired
-            botanical included for its skin-conditioning appeal.
-          </p>
-
-          <p>
-            <strong>Jojoba oil:</strong> an emollient that helps soften skin.
-          </p>
-
-          <p>
-            <strong>Glycerin:</strong> a humectant that attracts water.
-          </p>
-
-          <p>
-            <strong>Ceramides:</strong> lipids that support the skin barrier.
-          </p>
-
-          <p>
-            <strong>Fragrance:</strong> the concept is designed without
-            added fragrance to suit a simple, comfort-focused routine.
-          </p>
-
-          <p>
-            <em>
-              This is a fictional product concept, not a tested or
-              commercially available formula.
-            </em>
-          </p>
+          <p><strong>Prickly pear extract:</strong> a desert-inspired botanical included for its skin-conditioning appeal.</p>
+          <p><strong>Jojoba oil:</strong> an emollient that helps soften skin.</p>
+          <p><strong>Glycerin:</strong> a humectant that attracts water.</p>
+          <p><strong>Ceramides:</strong> lipids that support the skin barrier.</p>
+          <p><strong>Fragrance:</strong> this concept is designed without added fragrance for a simple, comfort-focused routine.</p>
+          <p><em>This is a fictional product concept, not a tested or commercially available formula.</em></p>
         </div>
-
       </div>
     </section>
 
     <section class="yellow-section" id="routine">
       <p class="eyebrow">Keep it simple</p>
-
       <h2>A summer moisturizing routine</h2>
 
       <div class="callout">
         <h3>Morning</h3>
-
-        <p>
-          Cleanse gently if needed, apply a light layer of moisturizer,
-          and finish with broad-spectrum SPF 30 or higher. Give each layer
-          a moment to settle before applying the next.
-        </p>
+        <p>Cleanse gently if needed, apply a light layer of moisturizer, and finish with broad-spectrum SPF 30 or higher. Give each layer a moment to settle before applying the next.</p>
       </div>
 
       <div class="callout">
         <h3>After a hot day</h3>
-
-        <p>
-          Wash away sweat and sunscreen with a gentle cleanser. Avoid
-          scrubbing or using very hot water. Apply moisturizer while your
-          skin is still slightly damp.
-        </p>
+        <p>Wash away sweat and sunscreen with a gentle cleanser. Avoid scrubbing or using very hot water. Apply moisturizer according to its directions.</p>
       </div>
 
       <div class="callout">
         <h3>Before bed</h3>
-
-        <p>
-          Use moisturizer again if your skin feels dry. If your cheeks
-          are especially dry, apply a slightly more generous layer there
-          instead of adding several new products at once.
-        </p>
+        <p>Use moisturizer again if your skin feels dry. If your cheeks are especially dry, you may prefer a slightly richer layer rather than adding several new products at once.</p>
       </div>
     </section>
 
     <section>
       <p class="eyebrow">Common questions</p>
-
       <h2>Summer moisturizer, explained</h2>
 
-      <h3>Should I stop moisturizing if my skin is oily?</h3>
+      <div class="faq-item">
+        <h3>Should I stop moisturizing if my skin is oily?</h3>
+        <p>No. Oily skin can still become dehydrated. Try a lightweight, non-comedogenic moisturizer and adjust the amount based on how your skin feels.</p>
+      </div>
 
-      <p>
-        No. Oily skin can still become dehydrated. Try a lightweight,
-        non-comedogenic moisturizer and adjust the amount based on how
-        your skin feels.
-      </p>
+      <div class="faq-item">
+        <h3>Should I use a heavier cream at night?</h3>
+        <p>Not necessarily. Choose a texture that leaves your skin comfortable. A richer cream may help very dry skin, while a lighter lotion may be enough for others.</p>
+      </div>
 
-      <h3>Should I use a heavier cream at night?</h3>
+      <div class="faq-item">
+        <h3>Can moisturizer replace sunscreen?</h3>
+        <p>A regular moisturizer does not replace broad-spectrum sunscreen. Use a sunscreen product as directed to help protect your skin from UV exposure.</p>
+      </div>
 
-      <p>
-        Not necessarily. Choose a texture that leaves your skin comfortable.
-        A richer cream may help very dry skin, while a lighter lotion may
-        be enough for others.
-      </p>
-
-      <h3>Can moisturizer replace sunscreen?</h3>
-
-      <p>
-        Only if the product also provides adequate labeled sun protection
-        and is used as directed. A regular moisturizer does not replace
-        broad-spectrum sunscreen.
-      </p>
-
-      <h3>When should I get professional advice?</h3>
-
-      <p>
-        If dryness persists, cracks, burns, or comes with a rash, consult
-        a qualified healthcare professional or dermatologist rather than
-        continually adding new products.
-      </p>
+      <div class="faq-item">
+        <h3>When should I get professional advice?</h3>
+        <p>If dryness persists, cracks, burns, or comes with a rash, consult a qualified healthcare professional or dermatologist rather than continually adding new products.</p>
+      </div>
     </section>
 
+    <section class="pink-section">
+      <div class="hero-content">
+        <p class="eyebrow">Your desert skincare routine</p>
+        <h2>Hydration that fits your everyday.</h2>
+        <p>Keep your routine simple, choose products that feel comfortable on your skin, and remember that daily sun protection is part of caring for your skin in a sunny climate.</p>
+        <a class="button" href="sunscreen.html">Explore sunscreen</a>
+        <a class="button" href="barrier-repair.html">Learn about barrier care</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <a class="logo" href="index.html" style="color:#FFD85A">SUNBLEACH</a>
-
+    <a class="logo" href="index.html" style="color:#FFD85A;">SUN<span>BLEACH</span></a>
     <nav aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="moisturizer.html">Moisturizer</a>
       <a href="sunscreen.html">Sunscreen</a>
-      <a href="barrier-repair.html">Skin Barrier Guide</a>
+      <a href="barrier-repair.html">Barrier Repair</a>
     </nav>
-
-    <p class="footer-note">
-      This is a fictional website created for educational purposes as part
-      of MKTG:4400 at the University of Iowa. It is not a real business.
-    </p>
-
-    <p class="footer-note">
-      All Sunbleach products and brand details are fictional. Ingredient
-      information is educational and is not a substitute for professional
-      skincare advice.
-    </p>
+    <p class="footer-note">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    <p class="footer-note">All Sunbleach products and brand details are fictional. Ingredient information is educational and is not a substitute for professional skincare advice.</p>
   </footer>
-
 </body>
 </html>
-
