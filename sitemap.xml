@@ -1,16 +1,15 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://juliakollman.github.io/sunbleach-skincare/index.html</loc>
-    </url>
-    <url>
-        <loc>https://juliakollman.github.io/sunbleach-skincare/moisturizer.html</loc>
-    </url>
-    <url>
-        <loc>https://juliakollman.github.io/sunbleach-skincare/sunscreen.html</loc>
-    </url>
-    <url>
-        <loc>https://juliakollman.github.io/sunbleach-skincare/barrier-repair.html</loc>
-    </url>
+  <url>
+    <loc>https://juliakollman.github.io/sunbleach-skincare/index.html</loc>
+  </url>
+  <url>
+    <loc>https://juliakollman.github.io/sunbleach-skincare/moisturizer.html</loc>
+  </url>
+  <url>
+    <loc>https://juliakollman.github.io/sunbleach-skincare/sunscreen.html</loc>
+  </url>
+  <url>
+    <loc>https://juliakollman.github.io/sunbleach-skincare/barrier-repair.html</loc>
+  </url>
 </urlset>
