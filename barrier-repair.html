@@ -4,233 +4,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn what your skin barrier does and discover simple skincare habits for dry desert climates.">
-  <title>How to Support Your Skin Barrier | Sunbleach</title>
+  <meta name="description" content="Learn the basics of your skin barrier, common signs of irritation, and a gentle routine inspired by Sunbleach desert skincare.">
+  <title>How to Repair Your Skin Barrier | Sunbleach</title>
   <style>
     :root {
-      --cream:#FFF8EF; --sand:#FFE3C2; --terra:#FF684A; --dark:#35213A;
-      --sage:#238F7B; --white:#FFFFFF; --pink:#FFB7C5; --yellow:#FFD85A; --turquoise:#76D9C3;
+      --cream: #fff8ed;
+      --sand: #f2dfc4;
+      --orange: #f47745;
+      --pink: #efaaa1;
+      --red: #a94332;
+      --green: #526b4d;
+      --dark: #302b25;
+      --white: #ffffff;
     }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--cream); color:var(--dark); font:16px/1.75 "Trebuchet MS",Arial,sans-serif; }
-    a { color:inherit; }
-    .notice { background:var(--dark); color:var(--white); text-align:center; padding:10px 16px; font-size:.78rem; line-height:1.5; }
-    header { padding:20px 6%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px; }
-    .logo { font-family:"Arial Black","Trebuchet MS",sans-serif; font-size:2rem; font-weight:900; letter-spacing:3px; text-decoration:none; }
-    .logo span { color:var(--terra); }
-    nav { display:flex; flex-wrap:wrap; gap:16px; }
-    nav a { text-decoration:none; font-size:.9rem; font-weight:bold; }
-    nav a:hover, footer nav a:hover { text-decoration:underline; text-underline-offset:4px; }
-    .hero { background:linear-gradient(120deg,#FFB7C5,#FFCA92 52%,#FFD85A); padding:75px 8%; }
-    .hero-content { max-width:800px; }
-    .eyebrow { color:#C83D35; text-transform:uppercase; font-size:.78rem; letter-spacing:2px; font-weight:900; }
-    h1,h2,h3 { font-family:"Arial Black","Trebuchet MS",sans-serif; line-height:1.15; font-weight:900; letter-spacing:-1px; }
-    h1 { font-size:clamp(2.5rem,7vw,4.6rem); letter-spacing:-2px; margin:12px 0 20px; }
-    h2 { font-size:clamp(2rem,4vw,2.8rem); }
-    h3 { font-size:1.4rem; margin-bottom:10px; }
-    p { margin-top:0; }
-    section { padding:55px 8%; }
-    .button { display:inline-block; background:var(--terra); color:var(--white); text-decoration:none; padding:12px 20px; margin-top:8px; border:2px solid var(--terra); border-radius:50px; font-weight:bold; }
-    .button:hover { background:#D94337; border-color:#D94337; }
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:35px; align-items:center; }
-    .panel { background:#B9EADF; border-radius:16px; padding:28px; }
-    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .card { background:var(--white); padding:22px; border:2px solid #F2D7CE; border-radius:16px; box-shadow:0 6px 16px rgba(53,33,58,.05); }
-    .swatch { min-height:100px; border-radius:12px; margin-bottom:18px; display:flex; align-items:center; justify-content:center; background:#FFE0B9; font-family:"Arial Black","Trebuchet MS",sans-serif; font-size:1rem; letter-spacing:1px; text-align:center; padding:12px; }
-    .callout { border-left:5px solid var(--terra); padding:5px 0 5px 20px; margin:25px 0; }
-    .pink-section { background:#FFE3EC; }
-    .yellow-section { background:#FFE6B4; }
-    .steps { counter-reset:step; list-style:none; padding:0; }
-    .steps li { counter-increment:step; margin:0 0 18px; padding:18px 20px 18px 65px; background:var(--white); border:2px solid #F2D7CE; border-radius:16px; position:relative; }
-    .steps li::before { content:counter(step); position:absolute; left:18px; top:17px; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--yellow); font-weight:900; }
-    .faq-item { border-bottom:2px solid #F2D7CE; padding:18px 0; }
-    .faq-item h3 { margin-top:0; }
-    footer { background:var(--dark); color:var(--white); padding:35px 8%; }
-    footer nav { margin:18px 0; }
-    footer nav a { color:var(--white); }
-    .footer-note { color:#F5E7F0; font-size:.8rem; }
-    .small-note { font-size:.88rem; }
-    @media (max-width:760px) {
-      header { justify-content:center; text-align:center; }
-      nav { justify-content:center; gap:12px; }
-      .hero { padding:50px 7%; }
-      section { padding:40px 7%; }
-      .split,.cards { grid-template-columns:1fr; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.7; }
+    a { color: inherit; }
+    .notice { padding: 12px 20px; background: var(--dark); color: var(--white); text-align: center; font-size: 12px; line-height: 1.5; }
+    header { padding: 20px 7%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid var(--sand); }
+    .logo { color: var(--red); font-size: 30px; font-weight: 900; letter-spacing: 5px; text-decoration: none; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { font-size: 13px; font-weight: bold; text-decoration: none; }
+    nav a:hover { color: var(--red); }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.15; }
+    h1 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -2px; margin: 15px 0 20px; }
+    h2 { font-size: clamp(30px, 4vw, 45px); margin-top: 0; }
+    h3 { font-size: 25px; margin-top: 0; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 800; }
+    .hero { padding: 70px 7%; background: var(--sand); display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 45px; }
+    .hero p { max-width: 570px; }
+    .hero-art { min-height: 330px; background: var(--pink); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .sun { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: #ffdc7b; top: 25px; left: calc(50% - 95px); }
+    .hill { position: absolute; width: 140%; height: 150px; bottom: -75px; background: var(--red); border-radius: 50% 50% 0 0; transform: rotate(-9deg); }
+    .hill.two { bottom: -110px; background: var(--green); transform: rotate(9deg); }
+    .art-label { position: absolute; z-index: 3; bottom: 30px; color: var(--white); font-family: Georgia, serif; font-size: 24px; letter-spacing: 2px; text-align: center; }
+    section { padding: 65px 7%; }
+    .intro { max-width: 750px; margin-bottom: 30px; }
+    .intro p { color: #665d52; }
+    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .card { background: var(--white); border: 1px solid var(--sand); padding: 28px; }
+    .card ul { padding-left: 20px; }
+    .card p:last-child { margin-bottom: 0; }
+    .dark-section { background: var(--green); color: var(--white); }
+    .dark-section .intro p { color: #f2eadc; }
+    .dark-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .dark-card { background: rgba(255,255,255,.1); padding: 23px; border-top: 3px solid var(--pink); }
+    .dark-card h3 { margin-bottom: 10px; }
+    .dark-card p { font-size: 14px; }
+    .routine { background: #f9e5d9; }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+    .step { padding: 23px; background: var(--cream); }
+    .step-number { color: var(--red); font-size: 12px; letter-spacing: 2px; font-weight: 900; }
+    .tip { background: var(--sand); padding: 28px; margin-top: 24px; border-left: 5px solid var(--orange); }
+    .button { display: inline-block; background: var(--dark); color: var(--white); padding: 13px 23px; margin-top: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: bold; border-radius: 3px; }
+    .button:hover { background: var(--red); }
+    footer { background: var(--dark); color: var(--white); padding: 40px 7% 0; }
+    .footer-main { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; padding-bottom: 30px; }
+    footer .logo { color: var(--pink); }
+    footer nav a { color: var(--white); }
+    footer .notice { margin: 0 -8.14%; background: #211e1a; padding: 15px 20px; }
+    @media(max-width:760px) {
+      header { padding: 18px 5%; }
+      nav { gap: 12px; }
+      .hero { grid-template-columns: 1fr; padding: 48px 6%; }
+      section { padding: 48px 6%; }
+      .content-grid, .dark-grid, .steps { grid-template-columns: 1fr; }
+      .hero-art { min-height: 270px; }
     }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
   <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
 
   <header>
-    <a class="logo" href="index.html">SUN<span>BLEACH</span></a>
+    <a class="logo" href="index.html">SUNBLEACH</a>
     <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="moisturizer.html">Moisturizer</a>
-      <a href="sunscreen.html">Sunscreen</a>
-      <a href="barrier-repair.html" aria-current="page">Barrier Repair</a>
+      <a href="index.html">HOME</a>
+      <a href="moisturizer.html">MOISTURIZER</a>
+      <a href="sunscreen.html">SUNSCREEN</a>
+      <a href="barrier.html">SKIN BARRIER</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Skin barrier, meet your match</p>
-        <h1>Give your skin a little extra love.</h1>
-        <p>Dry desert air, hot sunny days, and constant air conditioning can leave skin feeling tight and uncomfortable. Learn what your skin barrier does and how to build a simple routine that supports it.</p>
-        <a class="button" href="#routine">Build your routine</a>
+      <div>
+        <div class="eyebrow">The desert skin journal · Skin basics</div>
+        <h1>How to repair your skin barrier.</h1>
+        <p>Does your skin feel tight after washing, sting when you apply products, or seem unusually dry and sensitive? Your skin barrier may need a gentler routine.</p>
+        <p>Learn what the barrier does, what can disrupt it, and how to give your skin a chance to recover without overwhelming it with more products.</p>
+        <a class="button" href="#routine">Explore a gentle routine</a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a warm Arizona sunset over desert hills">
+        <div class="sun"></div>
+        <div class="hill"></div>
+        <div class="hill two"></div>
+        <div class="art-label">KEEP IT GENTLE</div>
       </div>
     </section>
 
     <section>
-      <div class="split">
-        <div>
-          <p class="eyebrow">Let's start with the basics</p>
-          <h2>What is your skin barrier?</h2>
-          <p>Your skin barrier is the outermost layer of your skin. It helps keep moisture in and protect your skin from irritants and things in the environment.</p>
-          <p>When the barrier is struggling, skin may feel dry, rough, tight, flaky, or more sensitive than usual. Those signs can have different causes, so pay attention to what your skin is telling you.</p>
-          <div class="callout"><strong>The goal:</strong> keep your routine gentle, support hydration, and avoid doing too much at once.</div>
-        </div>
-        <div class="panel">
-          <p class="eyebrow">Desert skin reality</p>
-          <h3>Why can dry climates be tough on skin?</h3>
-          <p>Low humidity can contribute to moisture loss, while hot weather and air conditioning can leave some people feeling extra dry.</p>
-          <p>A gentle cleanser, a moisturizer that suits your skin, and daily sun protection are useful starting points for a straightforward routine.</p>
-        </div>
+      <div class="intro">
+        <div class="eyebrow">The basics</div>
+        <h2>What is your skin barrier?</h2>
+        <p>Your skin barrier is the outermost layer of your skin. It helps limit water loss and protects against irritants from the environment. When it is disrupted, skin may feel dry, rough, tight, or more sensitive than usual.</p>
+      </div>
+      <div class="content-grid">
+        <article class="card">
+          <h3>Signs your skin needs a break</h3>
+          <ul>
+            <li>Dryness or tightness, especially after cleansing.</li>
+            <li>Flaking or rough patches that are new for you.</li>
+            <li>Stinging or burning when applying products that usually feel comfortable.</li>
+            <li>Redness or sensitivity that seems worse after using several active products.</li>
+          </ul>
+          <p>These signs can have different causes, so they do not confirm a damaged skin barrier on their own.</p>
+        </article>
+        <article class="card">
+          <h3>What can disrupt the barrier?</h3>
+          <ul>
+            <li>Frequent washing with harsh cleansers or very hot water.</li>
+            <li>Overusing exfoliating acids, scrubs, or retinoid products.</li>
+            <li>Dry environmental conditions and low humidity.</li>
+            <li>Using products that irritate your skin or do not suit your skin type.</li>
+          </ul>
+          <p>In a desert climate, dry air and long periods in air conditioning can make moisture loss especially noticeable.</p>
+        </article>
       </div>
     </section>
 
-    <section class="pink-section">
-      <p class="eyebrow">Know what your skin needs</p>
-      <h2>Signs your skin may need a reset</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="swatch" style="background:#FFB7C5;">01 · TIGHTNESS</div>
-          <h3>That tight feeling</h3>
-          <p>If your skin feels tight after washing or throughout the day, your cleanser or routine may be too drying for you.</p>
-        </article>
-        <article class="card">
-          <div class="swatch" style="background:#FFD85A;">02 · FLAKINESS</div>
-          <h3>Dry or flaky patches</h3>
-          <p>Roughness and flaking can be signs of dryness. A moisturizer and a gentler routine may help support comfortable skin.</p>
-        </article>
-        <article class="card">
-          <div class="swatch" style="background:#76D9C3;">03 · SENSITIVITY</div>
-          <h3>More easily irritated</h3>
-          <p>If products that usually feel fine suddenly sting, consider simplifying your routine and pausing products that seem irritating.</p>
-        </article>
+    <section class="dark-section">
+      <div class="intro">
+        <div class="eyebrow">Back to the basics</div>
+        <h2>Three habits that support your skin.</h2>
+        <p>You do not need an elaborate routine to care for your skin barrier. Start with gentle cleansing, regular moisturizing, and daily sun protection.</p>
       </div>
-      <p style="margin-top:24px;">These signs don't prove that your skin barrier is damaged. If irritation is persistent, severe, or getting worse, consider talking with a healthcare professional or dermatologist.</p>
-    </section>
-
-    <section>
-      <div class="split">
-        <div class="panel">
-          <p class="eyebrow">Keep your routine simple</p>
-          <h2>Less can be more.</h2>
-          <p>When skin feels dry or sensitive, adding lots of new products can make it harder to figure out what works. Start with a few basics and introduce changes gradually.</p>
-          <p>You don't need a complicated 10-step routine to take care of your skin.</p>
-        </div>
-        <div>
-          <h3>Three helpful habits</h3>
-          <p><strong>Be gentle.</strong> Use a mild cleanser and avoid scrubbing skin aggressively.</p>
-          <p><strong>Moisturize consistently.</strong> Choose a moisturizer that feels comfortable and helps with your dryness.</p>
-          <p><strong>Protect your skin.</strong> Wear broad-spectrum sunscreen during the day and follow the product's directions.</p>
-          <a class="button" href="moisturizer.html">Explore moisturizer</a>
-        </div>
+      <div class="dark-grid">
+        <article class="dark-card">
+          <h3>Keep cleansing gentle</h3>
+          <p>Choose a mild cleanser, use lukewarm water, and avoid scrubbing. Wash according to your skin's needs rather than repeatedly trying to remove every trace of oil.</p>
+        </article>
+        <article class="dark-card">
+          <h3>Moisturize consistently</h3>
+          <p>Look for a moisturizer with ingredients such as glycerin, ceramides, or suitable emollients. Apply after washing to help reduce water loss and improve comfort.</p>
+        </article>
+        <article class="dark-card">
+          <h3>Pause irritating extras</h3>
+          <p>If your skin is stinging or peeling, consider temporarily pausing exfoliants and other nonessential active products until it feels comfortable again.</p>
+        </article>
       </div>
     </section>
 
-    <section id="routine" class="yellow-section">
-      <p class="eyebrow">Your everyday reset</p>
-      <h2>A simple barrier-support routine</h2>
-      <div class="split">
-        <div>
-          <h3>Morning</h3>
-          <ol class="steps">
-            <li><strong>Cleanse gently.</strong><br>Use a gentle cleanser if needed. If your skin feels very dry, avoid over-cleansing.</li>
-            <li><strong>Moisturize.</strong><br>Apply a moisturizer that suits your skin and helps it feel comfortable.</li>
-            <li><strong>Apply sunscreen.</strong><br>Use broad-spectrum sunscreen as directed and reapply according to its label.</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Evening</h3>
-          <ol class="steps">
-            <li><strong>Wash away the day.</strong><br>Use a gentle cleanser to remove sunscreen, makeup, and everyday buildup.</li>
-            <li><strong>Moisturize again.</strong><br>Apply your moisturizer while following the product's directions.</li>
-            <li><strong>Give your skin time.</strong><br>Keep the routine consistent and avoid adding several new products at once.</li>
-          </ol>
-        </div>
+    <section id="routine" class="routine">
+      <div class="intro">
+        <div class="eyebrow">Your reset routine</div>
+        <h2>A simple morning and evening plan.</h2>
+        <p>Give your routine time to work. Introduce new products one at a time, and stop using anything that causes persistent irritation.</p>
       </div>
-    </section>
-
-    <section>
-      <p class="eyebrow">Ingredient spotlight</p>
-      <h2>Ingredients worth knowing</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="swatch" style="background:#B9EADF;">HUMECTANTS</div>
-          <h3>Glycerin</h3>
-          <p>Glycerin is a humectant, which means it helps attract water to the outer layer of the skin. It is commonly used in moisturizing products.</p>
+      <div class="steps">
+        <article class="step">
+          <div class="step-number">MORNING</div>
+          <h3>Cleanse if needed</h3>
+          <p>Use a gentle cleanser or rinse with lukewarm water if that works for your skin. Apply a moisturizer that feels comfortable.</p>
         </article>
-        <article class="card">
-          <div class="swatch" style="background:#FFE0B9;">EMOLLIENTS</div>
-          <h3>Squalane</h3>
-          <p>Squalane is an emollient used to help soften skin and improve the feel of a formula. It can be found in moisturizers and facial care products.</p>
+        <article class="step">
+          <div class="step-number">EVERY DAY</div>
+          <h3>Protect your skin</h3>
+          <p>Use broad-spectrum SPF 30 or higher. Reapply at least every two hours outdoors and after swimming or sweating, following the product label.</p>
         </article>
-        <article class="card">
-          <div class="swatch" style="background:#FFB7C5;">BARRIER LIPIDS</div>
-          <h3>Ceramides</h3>
-          <p>Ceramides are lipids naturally found in the skin barrier. Skincare products containing ceramides are designed to support the skin's moisture barrier.</p>
+        <article class="step">
+          <div class="step-number">EVENING</div>
+          <h3>Cleanse and moisturize</h3>
+          <p>Gently remove sunscreen and makeup, then apply moisturizer. Keep the rest of your routine simple while your skin settles.</p>
         </article>
       </div>
-      <p style="margin-top:24px;">Ingredients work differently depending on the full formula and the person using them. Choose products that fit your skin, and patch test new products when appropriate.</p>
-    </section>
-
-    <section class="pink-section">
-      <p class="eyebrow">Common questions</p>
-      <h2>Barrier repair FAQs</h2>
-      <div class="faq-item">
-        <h3>How long does it take to improve a skin barrier?</h3>
-        <p>It depends on what is causing the irritation or dryness. A gentle routine may help, but there is no single timeline that works for everyone. Persistent symptoms may need professional advice.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Should I stop using exfoliating products?</h3>
-        <p>If your skin is irritated, stinging, or unusually dry, consider pausing exfoliating products until your skin feels comfortable again. If symptoms continue, seek advice from a dermatologist.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can I still use active ingredients?</h3>
-        <p>It depends on your skin and the product. If your skin is feeling sensitive, keeping things simple can help you avoid additional irritation. Reintroduce products gradually if appropriate.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is moisturizer enough to protect my skin?</h3>
-        <p>Moisturizer helps with hydration, but it doesn't replace sunscreen or other sun-protective habits. A simple routine usually includes gentle cleansing, moisturizing, and daytime sun protection.</p>
+      <div class="tip">
+        <h3>When to get professional advice</h3>
+        <p>If your skin is severely painful, swollen, cracking, oozing, or not improving, speak with a healthcare professional or dermatologist. Persistent irritation may need more than a skincare routine change.</p>
+        <a class="button" href="moisturizer.html">Explore summer hydration</a>
       </div>
     </section>
 
     <section>
-      <div class="hero-content">
-        <p class="eyebrow">Keep it comfortable</p>
-        <h2>Your skin doesn't need a complicated routine.</h2>
-        <p>Start with the basics, pay attention to how your skin responds, and give your routine time. Small, consistent habits can make skincare feel much easier.</p>
-        <a class="button" href="moisturizer.html">Find your moisturizer routine</a>
-        <a class="button" href="sunscreen.html">Explore sunscreen</a>
+      <div class="intro">
+        <div class="eyebrow">The Sunbleach philosophy</div>
+        <h2>More care. Less overthinking.</h2>
+        <p>Our fictional desert skincare line is built around the idea that a routine should work with your environment, not against your skin. Gentle cleansing, comfortable moisture, and consistent sun protection are the foundation. Everything else is optional.</p>
+        <a class="button" href="index.html">Back to Sunbleach</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <a class="logo" href="index.html" style="color:#FFD85A;">SUN<span>BLEACH</span></a>
-    <nav aria-label="Footer navigation">
-      <a href="index.html">Home</a>
-      <a href="moisturizer.html">Moisturizer</a>
-      <a href="sunscreen.html">Sunscreen</a>
-      <a href="barrier-repair.html">Barrier Repair</a>
-    </nav>
-    <p class="footer-note">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
-    <p class="footer-note">Sunbleach is a fictional skincare brand. Product descriptions and formulations are educational concepts, not real products or tested skincare advice.</p>
+    <div class="footer-main">
+      <div>
+        <a class="logo" href="index.html">SUNBLEACH</a>
+        <p>Desert-inspired skincare.<br>Made for sunny days and everyday skin.</p>
+        <p>Scottsdale, Arizona · A fictional brand</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">HOME</a>
+        <a href="moisturizer.html">MOISTURIZER</a>
+        <a href="sunscreen.html">SUNSCREEN</a>
+        <a href="barrier.html">SKIN BARRIER</a>
+      </nav>
+    </div>
+    <div class="notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</div>
   </footer>
 </body>
 </html>
